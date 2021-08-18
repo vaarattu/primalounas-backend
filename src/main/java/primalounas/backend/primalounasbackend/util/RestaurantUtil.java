@@ -5,8 +5,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
+import org.apache.poi.hpsf.SummaryInformation;
 import primalounas.backend.primalounasbackend.model.RestResponse;
 import primalounas.backend.primalounasbackend.model.RestaurantCourse;
 import primalounas.backend.primalounasbackend.model.RestaurantDay;
@@ -32,6 +34,10 @@ public final class RestaurantUtil {
             BufferedInputStream in = new BufferedInputStream(con.getInputStream());
             HWPFDocument document = new HWPFDocument(in);
             String text = document.getDocumentText();
+
+            SummaryInformation si = document.getSummaryInformation();
+            Date created = si.getCreateDateTime();
+            Date lastSave = si.getLastSaveDateTime();
 
             text = text.trim().replaceAll("\r+", "\t").replaceAll(" +", " ").replaceAll("\t{2,}|\t+ +\t+", "\t");
             String[] splits = text.split("\t");
