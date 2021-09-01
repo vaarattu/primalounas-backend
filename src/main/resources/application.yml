@@ -1,0 +1,50 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+    database: postgresql
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      FAIL_ON_EMPTY_BEANS: false
+    deserialization:
+      unwrap-root-value: false
+
+  profiles:
+    active:
+      - dev
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+server:
+  port: 8080
+
+---
+
+clear:
+  all:
+    cache:
+      fixed:
+        rate:
+
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: "*"
+
+  endpoint:
+    shutdown:
+      enabled: true

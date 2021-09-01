@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/com.divit.spring-boot-simple-rest-api.iml" filepath="$PROJECT_DIR$/com.divit.spring-boot-simple-rest-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/primalounas-backend.iml" filepath="$PROJECT_DIR$/primalounas-backend.iml" />
     </modules>
   </component>
