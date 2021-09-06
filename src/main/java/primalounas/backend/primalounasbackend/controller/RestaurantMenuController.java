@@ -2,6 +2,7 @@ package primalounas.backend.primalounasbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import primalounas.backend.primalounasbackend.model.RestaurantDay;
+import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +23,7 @@ public class RestaurantMenuController {
 
 	@GetMapping(value = "/menu")
 	public ResponseEntity<Object> fetchMenu() {
-		List<RestaurantDay> items = this.restaurantMenuService.getAll();
+		List<RestaurantWeek> items = this.restaurantMenuService.getAll();
 		/*
 		if (restResponse.getResponseCode() == 1){
 			return ResponseEntity.ok(restResponse.getItems());

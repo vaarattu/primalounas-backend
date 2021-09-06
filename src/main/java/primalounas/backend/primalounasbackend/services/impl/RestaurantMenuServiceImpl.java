@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import primalounas.backend.primalounasbackend.model.RestaurantDay;
+import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.repositories.RestaurantMenuRepository;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 
@@ -21,14 +21,14 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
 
     @Cacheable
     @Override
-    public List<RestaurantDay> getAll() {
+    public List<RestaurantWeek> getAll() {
         //waitSomeTime();
         return this.restaurantMenuRepository.findAll();
     }
 
     @CacheEvict(allEntries=true)
     @Override
-    public RestaurantDay add(RestaurantDay restaurantDay) {
-        return this.restaurantMenuRepository.save(restaurantDay);
+    public RestaurantWeek add(RestaurantWeek restaurantWeek) {
+        return this.restaurantMenuRepository.save(restaurantWeek);
     }
 }

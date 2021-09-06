@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import primalounas.backend.primalounasbackend.model.FoodTags;
 import primalounas.backend.primalounasbackend.model.RestaurantCourse;
 import primalounas.backend.primalounasbackend.model.RestaurantDay;
+import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 
 import java.io.BufferedInputStream;
@@ -36,6 +37,7 @@ public class ScheduledService {
         log.info("[TEST] Fetching current menu...");
 
         try {
+            RestaurantWeek week = new RestaurantWeek();
             List<RestaurantDay> items = new ArrayList<>();
 
             String stringUrl = "https://drive.google.com/uc?id=0B8nQh-fa3RbLMFN0X1QxaDFhYzQ&export=download";
@@ -55,7 +57,7 @@ public class ScheduledService {
             Date lastSave = si.getLastSaveDateTime();
 
             // get the latest date from database and compare if file is newer
-            //TODO
+            week.setSaveDate(lastSave);
 
             String text = document.getDocumentText();
 
@@ -76,6 +78,8 @@ public class ScheduledService {
             String phoneNumber = splitsList.get(4);
             String soupPrice = splitsList.get(5);
             String title = splitsList.get(6);
+
+            week.setWeekName(title);
 
             boolean[] days = {false, false, false, false, false};
             List<List<String>> dayMenu = new ArrayList<>();
@@ -197,17 +201,23 @@ public class ScheduledService {
                     for (String s : allergensSplit) {
                         tags.add(FoodTags.valueOf(s));
                     }
-                    
-                    courses.add(new RestaurantCourse(name, price, type, tags));
+
+                    RestaurantCourse course = new RestaurantCourse();
+                    course.setName(name);
+                    course.setPrice(price);
+                    course.setType(type);
+                    //course.setFoodTags(tags.toArray(new FoodTags[0]));
+
+                    courses.add(course);
                 }
                 RestaurantDay rDay = new RestaurantDay();
                 rDay.setDay(day);
                 rDay.setCourses(courses);
                 items.add(rDay);
 
-                for (RestaurantDay item : items) {
-                    restaurantMenuService.add(item);
-                }
+                week.setDays(items);
+
+                restaurantMenuService.add(week);
             }
             con.disconnect();
             log.info("Successfully parsed week menu.");

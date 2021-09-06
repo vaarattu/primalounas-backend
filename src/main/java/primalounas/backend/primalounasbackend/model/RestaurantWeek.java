@@ -1,27 +1,26 @@
 package primalounas.backend.primalounasbackend.model;
 
-import javax.persistence.*;
-
 import lombok.*;
 
+import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="Day")
-@Table(name="day")
-public class RestaurantDay {
+@Entity(name="Week")
+@Table(name="week")
+public class RestaurantWeek {
 
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     private long id;
 
-    private String day;
-/*
-    @ManyToOne
-    private RestaurantWeek week;
-    */
+    private Date saveDate;
+
+    private String weekName;
+
     @OneToMany(cascade = CascadeType.ALL)
-    private List<RestaurantCourse> courses;
+    private List<RestaurantDay> days;
 }
