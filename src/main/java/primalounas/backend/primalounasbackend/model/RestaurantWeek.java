@@ -14,10 +14,12 @@ import java.util.List;
 public class RestaurantWeek {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long id;
 
     private Date saveDate;
+
+    private int weekIdentifier;
 
     private String weekName;
 

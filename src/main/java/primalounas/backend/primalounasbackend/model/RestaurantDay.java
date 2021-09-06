@@ -14,14 +14,11 @@ import java.util.List;
 public class RestaurantDay {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long id;
 
     private String day;
-/*
-    @ManyToOne
-    private RestaurantWeek week;
-    */
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<RestaurantCourse> courses;
 }

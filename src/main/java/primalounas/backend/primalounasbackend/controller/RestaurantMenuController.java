@@ -1,6 +1,7 @@
 package primalounas.backend.primalounasbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import primalounas.backend.primalounasbackend.model.RestaurantDay;
 import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
@@ -23,16 +24,37 @@ public class RestaurantMenuController {
 
 	@GetMapping(value = "/menu")
 	public ResponseEntity<Object> fetchMenu() {
-		List<RestaurantWeek> items = this.restaurantMenuService.getAll();
-		/*
-		if (restResponse.getResponseCode() == 1){
-			return ResponseEntity.ok(restResponse.getItems());
+		List<RestaurantWeek> weeks = null;
+		String errorText = "";
+		try {
+			weeks = this.restaurantMenuService.getCurrentWeek();
+		} catch (Exception ex){
+			errorText = ex.getMessage();
+		}
+
+		if (weeks != null && errorText.equals("")){
+			return ResponseEntity.ok(weeks);
 		}
 		else {
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(restResponse.getErrorText());
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorText);
 		}
-		*/
-		return ResponseEntity.ok(items);
 	}
 
+	@GetMapping(value = "/all")
+	public ResponseEntity<Object> fetchAll() {
+		List<RestaurantWeek> weeks = null;
+		String errorText = "";
+		try {
+			weeks = this.restaurantMenuService.getAllWeeks();
+		} catch (Exception ex){
+			errorText = ex.getMessage();
+		}
+
+		if (weeks != null && errorText.equals("")){
+			return ResponseEntity.ok(weeks);
+		}
+		else {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorText);
+		}
+	}
 }

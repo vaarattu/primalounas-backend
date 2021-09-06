@@ -15,10 +15,7 @@ import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 import java.io.BufferedInputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Slf4j
 @Component
@@ -32,13 +29,27 @@ public class ScheduledService {
         log.info("[DAILY] Fetching current menu...");
     }
 
+    private boolean CurrentWeekExists(){
+        Calendar calendar = Calendar.getInstance();
+        String yearString = Integer.toString(calendar.get(Calendar.YEAR));
+        String weekNumberString = Integer.toString(calendar.get(Calendar.WEEK_OF_YEAR));
+        int weekIdentifier = Integer.parseInt(yearString + weekNumberString);
+        List<RestaurantWeek> week = restaurantMenuService.getWeekNumber(weekIdentifier);
+        return week.size() != 0;
+    }
+
     @Scheduled(fixedDelay = 1000000)
     public void testFetchMenu(){
         log.info("[TEST] Fetching current menu...");
 
+        if (CurrentWeekExists()){
+            log.info("[TEST] Week already exists in database.");
+            return;
+        }
+
         try {
             RestaurantWeek week = new RestaurantWeek();
-            List<RestaurantDay> items = new ArrayList<>();
+            List<RestaurantDay> days = new ArrayList<>();
 
             String stringUrl = "https://drive.google.com/uc?id=0B8nQh-fa3RbLMFN0X1QxaDFhYzQ&export=download";
             URL url = new URL(stringUrl);
@@ -81,7 +92,13 @@ public class ScheduledService {
 
             week.setWeekName(title);
 
-            boolean[] days = {false, false, false, false, false};
+            Calendar calendar = Calendar.getInstance();
+            String yearString = Integer.toString(calendar.get(Calendar.YEAR));
+            String weekNumberString = title.replaceAll("\\D+","");
+            int weekIdentifier = Integer.parseInt(yearString + weekNumberString);
+            week.setWeekIdentifier(weekIdentifier);
+
+            boolean[] bDays = {false, false, false, false, false};
             List<List<String>> dayMenu = new ArrayList<>();
 
             for (int i = 7; i < splitsList.size(); i++) {
@@ -89,7 +106,7 @@ public class ScheduledService {
                 String curr = splitsList.get(i);
 
                 if (curr.toLowerCase().startsWith("ma ")){
-                    days[0] = true;
+                    bDays[0] = true;
                     List<String> monday = new ArrayList<>();
                     while (true){
                         String next = splitsList.get(i);
@@ -102,8 +119,8 @@ public class ScheduledService {
                     dayMenu.add(monday);
                 }
                 curr = splitsList.get(i);
-                if (curr.toLowerCase().startsWith("ti ") && days[0]){
-                    days[1] = true;
+                if (curr.toLowerCase().startsWith("ti ") && bDays[0]){
+                    bDays[1] = true;
                     List<String> tuesday = new ArrayList<>();
                     while (true){
                         String next = splitsList.get(i);
@@ -116,8 +133,8 @@ public class ScheduledService {
                     dayMenu.add(tuesday);
                 }
                 curr = splitsList.get(i);
-                if (curr.toLowerCase().startsWith("ke ") && days[1]){
-                    days[2] = true;
+                if (curr.toLowerCase().startsWith("ke ") && bDays[1]){
+                    bDays[2] = true;
                     List<String> wednesday = new ArrayList<>();
                     while (true){
                         String next = splitsList.get(i);
@@ -130,8 +147,8 @@ public class ScheduledService {
                     dayMenu.add(wednesday);
                 }
                 curr = splitsList.get(i);
-                if ((curr.toLowerCase().startsWith("to ") || curr.toLowerCase().startsWith("t0")) && days[2]){
-                    days[3] = true;
+                if ((curr.toLowerCase().startsWith("to ") || curr.toLowerCase().startsWith("t0")) && bDays[2]){
+                    bDays[3] = true;
                     List<String> thursday = new ArrayList<>();
                     while (true){
                         String next = splitsList.get(i);
@@ -144,8 +161,8 @@ public class ScheduledService {
                     dayMenu.add(thursday);
                 }
                 curr = splitsList.get(i);
-                if (curr.toLowerCase().startsWith("pe ") && days[3]){
-                    days[4] = true;
+                if (curr.toLowerCase().startsWith("pe ") && bDays[3]){
+                    bDays[4] = true;
                     List<String> friday = new ArrayList<>();
                     while (true){
                         String next = splitsList.get(i);
@@ -159,8 +176,8 @@ public class ScheduledService {
                 }
             }
 
-            for (int i = 0; i < dayMenu.size(); i++) {
-                String[] array = dayMenu.get(i).toArray(new String[0]);
+            for (List<String> menu : dayMenu) {
+                String[] array = menu.toArray(new String[0]);
                 List<RestaurantCourse> courses = new ArrayList<>();
                 String day = array[0];
                 String type = "";
@@ -193,32 +210,29 @@ public class ScheduledService {
                     }
                     if (foundAllergens) {
                         allergensSplit = allergens.split(",");
-                        name = name.replaceAll(allergens, "");
+                        name = name.replaceAll(" " + allergens, "");
                     }
                     name = name.trim();
-                    
-                    List<FoodTags> tags = new ArrayList<>();
-                    for (String s : allergensSplit) {
-                        tags.add(FoodTags.valueOf(s));
-                    }
+
+                    List<String> tags = new ArrayList<>(Arrays.asList(allergensSplit));
 
                     RestaurantCourse course = new RestaurantCourse();
                     course.setName(name);
                     course.setPrice(price);
                     course.setType(type);
-                    //course.setFoodTags(tags.toArray(new FoodTags[0]));
+                    course.setTags(tags);
 
                     courses.add(course);
                 }
                 RestaurantDay rDay = new RestaurantDay();
                 rDay.setDay(day);
                 rDay.setCourses(courses);
-                items.add(rDay);
-
-                week.setDays(items);
-
-                restaurantMenuService.add(week);
+                days.add(rDay);
             }
+
+            week.setDays(days);
+            restaurantMenuService.addNewWeek(week);
+
             con.disconnect();
             log.info("Successfully parsed week menu.");
         } catch (Exception e){
