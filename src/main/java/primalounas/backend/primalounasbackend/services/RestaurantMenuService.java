@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface RestaurantMenuService {
     List<RestaurantWeek> getAllWeeks();
-    List<RestaurantWeek> getCurrentWeek();
-    List<RestaurantWeek> getWeekNumber(int weekIdentifier);
+    RestaurantWeek getCurrentWeek();
+    RestaurantWeek getWeekByIdentifier(int weekIdentifier);
     RestaurantWeek addNewWeek(RestaurantWeek restaurantWeek);
 }

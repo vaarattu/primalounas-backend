@@ -8,14 +8,14 @@
 		<version>2.5.3</version>
 		<relativePath/>
 	</parent>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<groupId>primalounas.backend</groupId>
 	<artifactId>primalounas-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>primalounas-backend</name>
 	<description>Prima Lounas backend server</description>
 	<properties>
-		<start-class>primalounas.backend.application.main</start-class>
+		<start-class>primalounas.backend.primalounasbackend.Application</start-class>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
@@ -76,18 +76,11 @@
 	</dependencies>
 
 	<build>
-		<finalName>${artifactId}</finalName>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<executable>true</executable>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -2,6 +2,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
 
     show-sql: true
     properties:
@@ -48,3 +49,4 @@ management:
   endpoint:
     shutdown:
       enabled: true
+      

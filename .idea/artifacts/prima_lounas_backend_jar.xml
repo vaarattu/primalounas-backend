@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="prima-lounas-backend:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/prima_lounas_backend_jar</output-path>
-    <root id="archive" name="prima-lounas-backend_jar.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/prima_lounas_backend</output-path>
+    <root id="archive" name="prima-lounas-backend.jar">
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
       </element>

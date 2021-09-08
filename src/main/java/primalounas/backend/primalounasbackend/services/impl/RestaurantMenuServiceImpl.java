@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import primalounas.backend.primalounasbackend.model.RestaurantWeek;
@@ -19,19 +20,22 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
     @Autowired
     private RestaurantMenuRepository restaurantMenuRepository;
 
+    //@Cacheable
     @Override
     public List<RestaurantWeek> getAllWeeks() {
         return this.restaurantMenuRepository.findAll();
     }
 
+    //@Cacheable
     @Override
-    public List<RestaurantWeek> getCurrentWeek() {
+    public RestaurantWeek getCurrentWeek() {
         int weekIdentifier = Common.CurrentWeekIdentifier();
         return this.restaurantMenuRepository.findByWeekIdentifier(weekIdentifier);
     }
 
+    //@Cacheable
     @Override
-    public List<RestaurantWeek> getWeekNumber(int weekIdentifier) {
+    public RestaurantWeek getWeekByIdentifier(int weekIdentifier) {
         return this.restaurantMenuRepository.findByWeekIdentifier(weekIdentifier);
     }
 

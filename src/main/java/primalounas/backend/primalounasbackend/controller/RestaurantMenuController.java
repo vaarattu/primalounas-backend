@@ -24,16 +24,16 @@ public class RestaurantMenuController {
 
 	@GetMapping(value = "/menu")
 	public ResponseEntity<Object> fetchMenu() {
-		List<RestaurantWeek> weeks = null;
+		RestaurantWeek week = null;
 		String errorText = "";
 		try {
-			weeks = this.restaurantMenuService.getCurrentWeek();
+			week = this.restaurantMenuService.getCurrentWeek();
 		} catch (Exception ex){
 			errorText = ex.getMessage();
 		}
 
-		if (weeks != null && errorText.equals("")){
-			return ResponseEntity.ok(weeks);
+		if (week != null && errorText.equals("")){
+			return ResponseEntity.ok(week);
 		}
 		else {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorText);

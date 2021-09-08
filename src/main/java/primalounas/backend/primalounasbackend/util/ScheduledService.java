@@ -34,8 +34,8 @@ public class ScheduledService {
         String yearString = Integer.toString(calendar.get(Calendar.YEAR));
         String weekNumberString = Integer.toString(calendar.get(Calendar.WEEK_OF_YEAR));
         int weekIdentifier = Integer.parseInt(yearString + weekNumberString);
-        List<RestaurantWeek> week = restaurantMenuService.getWeekNumber(weekIdentifier);
-        return week.size() != 0;
+        RestaurantWeek week = restaurantMenuService.getWeekByIdentifier(weekIdentifier);
+        return week != null;
     }
 
     @Scheduled(fixedDelay = 1000000)
