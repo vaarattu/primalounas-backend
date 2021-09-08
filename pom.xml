@@ -47,7 +47,6 @@
 			<artifactId>hibernate-types-52</artifactId>
 			<version>2.12.0</version>
 		</dependency>
-		<!-- org.apache.poi contains HWPFDocument for parsing .doc files -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-scratchpad</artifactId>

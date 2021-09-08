@@ -9,13 +9,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="Day")
-@Table(name="day")
+@Entity
+@Table(name="days")
 public class RestaurantDay {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String day;
 

@@ -12,7 +12,7 @@ public class CachingConfig {
 
     @Bean
     public CacheManager cacheManager() {
-        return new ConcurrentMapCacheManager("restaurantMenu");
+        CacheManager manager = new ConcurrentMapCacheManager("allWeeks", "currentWeek");
+        return manager;
     }
-
 }

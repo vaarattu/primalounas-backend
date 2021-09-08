@@ -9,17 +9,14 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="Week")
-@Table(name="week")
+@Entity
+@Table(name="weeks")
 public class RestaurantWeek {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long id;
 
     private Date saveDate;
-
-    private int weekIdentifier;
 
     private String weekName;
 

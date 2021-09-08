@@ -1,12 +1,17 @@
 package primalounas.backend.primalounasbackend.util;
 
-import java.util.Calendar;
+import lombok.extern.slf4j.Slf4j;
 
+import java.time.LocalDate;
+import java.time.temporal.WeekFields;
+
+@Slf4j
 public class Common {
-    public static int CurrentWeekIdentifier(){
-        Calendar calendar = Calendar.getInstance();
-        String yearString = Integer.toString(calendar.get(Calendar.YEAR));
-        String weekNumberString = Integer.toString(calendar.get(Calendar.WEEK_OF_YEAR));
-        return Integer.parseInt(yearString + weekNumberString);
+    public static long CurrentWeekIdentifier(){
+        LocalDate date = LocalDate.now();
+        log.info("Current date is " + date);
+        String yearString = Integer.toString(date.getYear());
+        String weekNumberString = Integer.toString(date.get(WeekFields.ISO.weekOfWeekBasedYear()));
+        return Long.parseLong(yearString + weekNumberString);
     }
 }

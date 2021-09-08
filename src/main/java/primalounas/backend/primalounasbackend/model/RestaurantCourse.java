@@ -13,9 +13,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name="Course")
-@Table(name="course")
 @TypeDef(name = "list-array", typeClass = ListArrayType.class)
+@Entity
+@Table(name="courses")
 public class RestaurantCourse {
 
     @Id

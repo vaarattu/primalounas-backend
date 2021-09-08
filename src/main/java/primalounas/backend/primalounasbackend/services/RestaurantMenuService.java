@@ -8,5 +8,6 @@ public interface RestaurantMenuService {
     List<RestaurantWeek> getAllWeeks();
     RestaurantWeek getCurrentWeek();
     RestaurantWeek getWeekByIdentifier(int weekIdentifier);
+    RestaurantWeek getWeekById(long id);
     RestaurantWeek addNewWeek(RestaurantWeek restaurantWeek);
 }

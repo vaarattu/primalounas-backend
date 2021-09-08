@@ -2,7 +2,6 @@ package primalounas.backend.primalounasbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import primalounas.backend.primalounasbackend.model.RestaurantDay;
 import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 import org.springframework.http.ResponseEntity;

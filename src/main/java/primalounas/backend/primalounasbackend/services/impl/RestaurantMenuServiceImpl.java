@@ -1,6 +1,7 @@
 package primalounas.backend.primalounasbackend.services.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
@@ -13,35 +14,42 @@ import primalounas.backend.primalounasbackend.repositories.RestaurantMenuReposit
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 import primalounas.backend.primalounasbackend.util.Common;
 
+@CacheConfig
 @Service
-@CacheConfig(cacheNames="restaurantMenu")
 public class RestaurantMenuServiceImpl implements RestaurantMenuService {
 
     @Autowired
     private RestaurantMenuRepository restaurantMenuRepository;
 
-    //@Cacheable
+    @Cacheable("allWeeks")
     @Override
     public List<RestaurantWeek> getAllWeeks() {
-        return this.restaurantMenuRepository.findAll();
+        List<RestaurantWeek> weeks = this.restaurantMenuRepository.findAll();
+        return weeks;
     }
 
-    //@Cacheable
+    @Cacheable("currentWeek")
     @Override
     public RestaurantWeek getCurrentWeek() {
-        int weekIdentifier = Common.CurrentWeekIdentifier();
-        return this.restaurantMenuRepository.findByWeekIdentifier(weekIdentifier);
+        long weekIdentifier = Common.CurrentWeekIdentifier();
+        Optional<RestaurantWeek> week = this.restaurantMenuRepository.findById(weekIdentifier);
+        return week.get();
     }
 
-    //@Cacheable
     @Override
     public RestaurantWeek getWeekByIdentifier(int weekIdentifier) {
-        return this.restaurantMenuRepository.findByWeekIdentifier(weekIdentifier);
+        return this.restaurantMenuRepository.findWeekByWeekIdentifierParamNative(weekIdentifier);
+    }
+
+    @Override
+    public RestaurantWeek getWeekById(long id) {
+        Optional<RestaurantWeek> week = this.restaurantMenuRepository.findById(id);
+        return week.isEmpty() ? null : week.get();
     }
 
     @CacheEvict(allEntries=true)
     @Override
     public RestaurantWeek addNewWeek(RestaurantWeek restaurantWeek) {
-        return this.restaurantMenuRepository.save(restaurantWeek);
+        return this.restaurantMenuRepository.saveAndFlush(restaurantWeek);
     }
 }

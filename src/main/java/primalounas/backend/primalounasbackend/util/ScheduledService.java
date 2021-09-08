@@ -30,11 +30,10 @@ public class ScheduledService {
     }
 
     private boolean CurrentWeekExists(){
-        Calendar calendar = Calendar.getInstance();
-        String yearString = Integer.toString(calendar.get(Calendar.YEAR));
-        String weekNumberString = Integer.toString(calendar.get(Calendar.WEEK_OF_YEAR));
-        int weekIdentifier = Integer.parseInt(yearString + weekNumberString);
-        RestaurantWeek week = restaurantMenuService.getWeekByIdentifier(weekIdentifier);
+        log.info("[TEST] Checking if current week exists in database...");
+        long weekIdentifier = Common.CurrentWeekIdentifier();
+        log.info("[TEST] Checking with id: " + weekIdentifier);
+        RestaurantWeek week = restaurantMenuService.getWeekById(weekIdentifier);
         return week != null;
     }
 
@@ -45,6 +44,9 @@ public class ScheduledService {
         if (CurrentWeekExists()){
             log.info("[TEST] Week already exists in database.");
             return;
+        }
+        else{
+            log.info("[TEST] Week doesn't exist in database.");
         }
 
         try {
@@ -95,8 +97,8 @@ public class ScheduledService {
             Calendar calendar = Calendar.getInstance();
             String yearString = Integer.toString(calendar.get(Calendar.YEAR));
             String weekNumberString = title.replaceAll("\\D+","");
-            int weekIdentifier = Integer.parseInt(yearString + weekNumberString);
-            week.setWeekIdentifier(weekIdentifier);
+            long weekIdentifier = Long.parseLong(yearString + weekNumberString);
+            week.setId(weekIdentifier);
 
             boolean[] bDays = {false, false, false, false, false};
             List<List<String>> dayMenu = new ArrayList<>();
