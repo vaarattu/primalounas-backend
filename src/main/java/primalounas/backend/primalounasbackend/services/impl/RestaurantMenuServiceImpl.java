@@ -14,7 +14,7 @@ import primalounas.backend.primalounasbackend.repositories.RestaurantMenuReposit
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 import primalounas.backend.primalounasbackend.util.Common;
 
-@CacheConfig
+@CacheConfig(cacheNames = {"allWeeks", "currentWeek"})
 @Service
 public class RestaurantMenuServiceImpl implements RestaurantMenuService {
 
@@ -24,16 +24,15 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
     @Cacheable("allWeeks")
     @Override
     public List<RestaurantWeek> getAllWeeks() {
-        List<RestaurantWeek> weeks = this.restaurantMenuRepository.findAll();
-        return weeks;
+        return this.restaurantMenuRepository.findAll();
     }
 
     @Cacheable("currentWeek")
     @Override
     public RestaurantWeek getCurrentWeek() {
-        long weekIdentifier = Common.CurrentWeekIdentifier();
-        Optional<RestaurantWeek> week = this.restaurantMenuRepository.findById(weekIdentifier);
-        return week.get();
+        Optional<RestaurantWeek> nextWeek = this.restaurantMenuRepository.findById(Common.NextWeekIdentifier());
+        Optional<RestaurantWeek> thisWeek = this.restaurantMenuRepository.findById(Common.CurrentWeekIdentifier());
+        return nextWeek.orElseGet(thisWeek::get);
     }
 
     @Override
