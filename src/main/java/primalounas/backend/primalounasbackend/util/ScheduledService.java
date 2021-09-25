@@ -19,6 +19,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Year;
 import java.util.*;
 
@@ -28,24 +30,10 @@ public class ScheduledService {
 
     @Autowired
     private RestaurantMenuService restaurantMenuService;
-/*
-    @Scheduled(fixedDelay = 20000000)
-    public void dailyFetchMenu(){
-        log.info("[DAILY] Fetching current menu...");
-        testFetchMenu();
-    }
-*/
+
     @Scheduled(cron = "0 0 8,20 * * *", zone = "Europe/Helsinki")
     public void testFetchMenu(){
         log.info("[TEST] Fetching current menu.");
-
-        if (CurrentWeekInDatabase() && CurrentWeekSaved()){
-            log.info("[TEST] Week already exists in database and is saved to folder.");
-            return;
-        }
-        else {
-            log.info("[TEST] Week doesn't exist in database or in folder.");
-        }
 
         try {
             log.info("[TEST] Downloading file from google drive.");
@@ -63,12 +51,12 @@ public class ScheduledService {
             log.info("[TEST] Parsing week menu from document.");
             RestaurantWeek week = ParseWeekFromDocument(document);
 
-            if (NeedToSaveOrUpdateDatabase(week.getSaveDate())){
+            if (NeedToSaveOrUpdateDatabase(GenerateWeekIdentifier(week.getWeekName()), week.getSaveDate())){
                 log.info("[TEST] Saving week to database.");
                 restaurantMenuService.addNewWeek(week);
             }
 
-            if (!CurrentWeekSaved()){
+            if (!CurrentWeekSaved(GenerateWeekIdentifier(week.getWeekName()))){
                 log.info("[TEST] Saving week doc and json files to folder.");
                 SaveFiles(document, week);
             }
@@ -80,29 +68,30 @@ public class ScheduledService {
         }
     }
 
-    private boolean NeedToSaveOrUpdateDatabase(Date saveDate){
+    private long GenerateWeekIdentifier(String weekName){
+        String week = weekName.split("(?=\\d*$)",2)[1];
+        String year = Year.now().toString();
+        long identifier = Long.parseLong(year + week);
+        return identifier;
+    }
+
+    private boolean NeedToSaveOrUpdateDatabase(long weekId, Date saveDate){
         log.info("[TEST] Checking NeedToSaveOrUpdateDatabase.");
-        long weekIdentifier = Common.CurrentWeekIdentifier();
-        RestaurantWeek week = restaurantMenuService.getWeekById(weekIdentifier);
+        RestaurantWeek week = restaurantMenuService.getWeekById(weekId);
         if (week == null){
             log.info("[TEST] Week doesn't exist in database.");
-            return false;
+            return true;
         }
-        boolean areEqual = week.getSaveDate() != saveDate;
+        Date weekDate = week.getSaveDate();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        boolean areEqual = dateFormat.format(weekDate).equals(dateFormat.format(saveDate));
         log.info("[TEST] Checking LastSavedChanged, are equal: " + areEqual);
-        return areEqual;
+        return !areEqual;
     }
 
-    private boolean CurrentWeekInDatabase(){
-        long weekIdentifier = Common.CurrentWeekIdentifier();
-        RestaurantWeek week = restaurantMenuService.getWeekById(weekIdentifier);
-        log.info("[TEST] Current week with id: " + weekIdentifier + " exists in database: " + (week != null));
-        return week != null;
-    }
-
-    private boolean CurrentWeekSaved(){
+    private boolean CurrentWeekSaved(long weekIdentifier){
         String folderPath = "./data_docs/";
-        String jsonFilePath = folderPath + Common.CurrentWeekIdentifier() + ".json";
+        String jsonFilePath = folderPath + weekIdentifier + ".json";
         File file = new File(jsonFilePath);
         log.info("[TEST] JSON file with path : " + jsonFilePath + " exists in folder: " + (file.isFile()));
         return file.isFile();
@@ -110,7 +99,7 @@ public class ScheduledService {
 
     private void SaveFiles(HWPFDocument document, RestaurantWeek week) throws Exception {
         String folderPath = "./data_docs/";
-        String jsonFilePath = folderPath + Common.CurrentWeekIdentifier();
+        String jsonFilePath = folderPath + GenerateWeekIdentifier(week.getWeekName());
         String docFilePath = folderPath + week.getWeekName() + "-" + Year.now();
         log.info("[TEST] Checking if folder exists.");
         if (!Files.isDirectory(Path.of(folderPath))){
@@ -160,7 +149,7 @@ public class ScheduledService {
 
         week.setWeekName(title);
 
-        long weekIdentifier = Common.CurrentWeekIdentifier();
+        long weekIdentifier = GenerateWeekIdentifier(week.getWeekName());
         week.setId(weekIdentifier);
 
         boolean[] bDays = {false, false, false, false, false};
