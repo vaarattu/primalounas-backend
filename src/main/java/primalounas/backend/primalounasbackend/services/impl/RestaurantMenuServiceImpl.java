@@ -1,8 +1,10 @@
 package primalounas.backend.primalounasbackend.services.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -16,6 +18,7 @@ import primalounas.backend.primalounasbackend.util.Common;
 
 @CacheConfig(cacheNames = {"allWeeks", "currentWeek"})
 @Service
+@Slf4j
 public class RestaurantMenuServiceImpl implements RestaurantMenuService {
 
     @Autowired
@@ -24,15 +27,29 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
     @Cacheable("allWeeks")
     @Override
     public List<RestaurantWeek> getAllWeeks() {
+        log.info("[DB] Loading all from database.");
         return this.restaurantMenuRepository.findAll();
     }
 
     @Cacheable("currentWeek")
     @Override
-    public RestaurantWeek getCurrentWeek() {
+    public List<RestaurantWeek> getCurrentWeek() {
+        log.info("[DB] Loading current and next weeks from database.");
+        List<RestaurantWeek> weeks = new ArrayList<>();
+
         Optional<RestaurantWeek> nextWeek = this.restaurantMenuRepository.findById(Common.NextWeekIdentifier());
+        if(nextWeek.isPresent()){
+            weeks.add(nextWeek.get());
+            return weeks;
+        }
+
         Optional<RestaurantWeek> thisWeek = this.restaurantMenuRepository.findById(Common.CurrentWeekIdentifier());
-        return nextWeek.orElseGet(thisWeek::get);
+        if(thisWeek.isPresent()){
+            weeks.add(thisWeek.get());
+            return weeks;
+        }
+
+        return weeks;
     }
 
     @Override

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -23,16 +24,16 @@ public class RestaurantMenuController {
 
 	@GetMapping(value = "/menu")
 	public ResponseEntity<Object> fetchMenu() {
-		RestaurantWeek week = null;
+		List<RestaurantWeek> weeks = new ArrayList<>();
 		String errorText = "";
 		try {
-			week = this.restaurantMenuService.getCurrentWeek();
+			weeks = this.restaurantMenuService.getCurrentWeek();
 		} catch (Exception ex){
 			errorText = ex.getMessage();
 		}
 
-		if (week != null && errorText.equals("")){
-			return ResponseEntity.ok(week);
+		if (errorText.equals("")){
+			return ResponseEntity.ok(weeks);
 		}
 		else {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorText);
@@ -41,7 +42,7 @@ public class RestaurantMenuController {
 
 	@GetMapping(value = "/all")
 	public ResponseEntity<Object> fetchAll() {
-		List<RestaurantWeek> weeks = null;
+		List<RestaurantWeek> weeks = new ArrayList<>();
 		String errorText = "";
 		try {
 			weeks = this.restaurantMenuService.getAllWeeks();
@@ -49,7 +50,7 @@ public class RestaurantMenuController {
 			errorText = ex.getMessage();
 		}
 
-		if (weeks != null && errorText.equals("")){
+		if (errorText.equals("")){
 			return ResponseEntity.ok(weeks);
 		}
 		else {
