@@ -2,6 +2,7 @@ package primalounas.backend.primalounasbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import primalounas.backend.primalounasbackend.model.FrequentCourse;
 import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Slf4j
@@ -56,5 +58,29 @@ public class RestaurantMenuController {
 		else {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorText);
 		}
+	}
+
+	@GetMapping(value = "/frequent")
+	public ResponseEntity<Object> fetchFrequent() {
+		List<FrequentCourse> courses = new ArrayList<>();
+		String errorText = "";
+		try {
+			courses = this.restaurantMenuService.getFrequentCourses();
+		} catch (Exception ex){
+			errorText = ex.getMessage();
+		}
+
+		if (errorText.equals("")){
+			return ResponseEntity.ok(courses);
+		}
+		else {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorText);
+		}
+	}
+
+
+	@GetMapping(value = "/lists/popular")
+	public ResponseEntity<Object> fetchPopular() {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("WIP");
 	}
 }

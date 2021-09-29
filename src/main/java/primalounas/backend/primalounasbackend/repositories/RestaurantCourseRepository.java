@@ -5,14 +5,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import primalounas.backend.primalounasbackend.model.RestaurantCourse;
-import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 
 @Repository
-public interface RestaurantMenuRepository extends JpaRepository<RestaurantWeek, Long> {
-
-    @Query(value = "SELECT * FROM Week w WHERE w.week_identifier = :weekIdentifier", nativeQuery = true)
-    RestaurantWeek findWeekByWeekIdentifierParamNative(@Param("weekIdentifier") Integer weekIdentifier);
+public interface RestaurantCourseRepository extends JpaRepository<RestaurantCourse, Long> {
 
     @Query(value = "SELECT * FROM Courses c WHERE c.name = :name", nativeQuery = true)
     RestaurantCourse findCourseByName(@Param("name") String name);
+
+
 }

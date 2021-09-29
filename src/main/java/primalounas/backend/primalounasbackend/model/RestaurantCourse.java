@@ -15,11 +15,11 @@ import java.util.List;
 @Data
 @TypeDef(name = "list-array", typeClass = ListArrayType.class)
 @Entity
-@Table(name="courses")
+@Table(name = "courses")
 public class RestaurantCourse {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     private String name;
