@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import primalounas.backend.primalounasbackend.model.CourseVote;
 import primalounas.backend.primalounasbackend.model.RestaurantDay;
 import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
@@ -22,7 +23,11 @@ public class DatabaseBackupCheck {
     private RestaurantMenuService restaurantMenuService;
 
     @EventListener(ApplicationReadyEvent.class)
-    public void ReadLocalFilesToDatabase() {
+    private void ApplicationStarted(){
+        ReadLocalFilesToDatabase();
+    }
+
+    private void ReadLocalFilesToDatabase() {
         log.info("[BACKUP] Reading local files.");
         String path = "./data_docs/";
         File folder = new File(path);

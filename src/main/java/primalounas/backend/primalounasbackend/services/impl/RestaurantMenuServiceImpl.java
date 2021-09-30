@@ -9,10 +9,8 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import primalounas.backend.primalounasbackend.model.FrequentCourse;
-import primalounas.backend.primalounasbackend.model.RestaurantCourse;
-import primalounas.backend.primalounasbackend.model.RestaurantDay;
-import primalounas.backend.primalounasbackend.model.RestaurantWeek;
+import primalounas.backend.primalounasbackend.model.*;
+import primalounas.backend.primalounasbackend.repositories.CourseVoteRepository;
 import primalounas.backend.primalounasbackend.repositories.RestaurantCourseRepository;
 import primalounas.backend.primalounasbackend.repositories.RestaurantDayRepository;
 import primalounas.backend.primalounasbackend.repositories.RestaurantMenuRepository;
@@ -32,6 +30,9 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
 
     @Autowired
     private RestaurantCourseRepository restaurantCourseRepository;
+
+    @Autowired
+    private CourseVoteRepository courseVoteRepository;
 
     @Cacheable("allWeeks")
     @Override
@@ -105,6 +106,14 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
         for (RestaurantDay day : restaurantWeek.getDays()) {
             for (RestaurantCourse course : day.getCourses()) {
                 course.setId(0);
+
+                CourseVote vote = new CourseVote();
+                vote.setVotes(0);
+                vote.setLikes(0);
+                vote.setDislikes(0);
+                vote.setCourse(course);
+                course.setCourseVote(vote);
+
                 RestaurantCourse dbCourse = this.restaurantCourseRepository.findCourseByName(course.getName());
                 if (dbCourse == null) {
                     course.setId(this.restaurantCourseRepository.save(course).getId());
@@ -117,5 +126,15 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
         }
 
         return this.restaurantMenuRepository.saveAndFlush(restaurantWeek);
+    }
+
+    @Override
+    public List<CourseVote> getAllCourseVotes() {
+        return this.courseVoteRepository.findAll();
+    }
+
+    @Override
+    public CourseVote updateCourseVote(CourseVote courseVote) {
+        return this.courseVoteRepository.save(courseVote);
     }
 }

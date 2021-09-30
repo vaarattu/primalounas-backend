@@ -1,5 +1,6 @@
 package primalounas.backend.primalounasbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.vladmihalcea.hibernate.type.array.ListArrayType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,6 +33,11 @@ public class RestaurantCourse {
     @Type(type = "list-array")
     @Column(name = "tags", columnDefinition = "text[]")
     private List<String> tags;
+
+    @OneToOne(mappedBy = "course", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    @JsonManagedReference
+    private CourseVote courseVote;
 
     @Override
     public boolean equals(Object o) {
