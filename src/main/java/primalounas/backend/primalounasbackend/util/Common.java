@@ -40,6 +40,16 @@ public class Common {
         long identifier = Long.parseLong(year + week);
         return identifier;
     }
+    public static long GenerateDayIdentifier(String dayText){
+        String[] split = dayText.split("\\.");
+        String splitDay = split[0].replaceAll("\\D+","");
+        String splitMonth = split[1].replaceAll("\\D+","");
+        LocalDate date = LocalDate.of(Year.now().getValue(), Integer.parseInt(splitMonth), Integer.parseInt(splitDay));
+        String day = String.valueOf(date.getDayOfYear());
+        String year = Year.now().toString();
+        long identifier = Long.parseLong(year + day);
+        return identifier;
+    }
     public static RestaurantWeek ParseWeekFromDocument(HWPFDocument document){
         // use these to determine if there's new data or not
         SummaryInformation si = document.getSummaryInformation();
@@ -73,9 +83,7 @@ public class Common {
         String title = splitsList.get(6);
 
         week.setWeekName(title);
-
-        long weekIdentifier = GenerateWeekIdentifier(week.getWeekName());
-        week.setId(weekIdentifier);
+        week.setId(GenerateWeekIdentifier(week.getWeekName()));
 
         boolean[] bDays = {false, false, false, false, false};
         List<List<String>> dayMenu = new ArrayList<>();
@@ -206,6 +214,8 @@ public class Common {
             RestaurantDay rDay = new RestaurantDay();
             rDay.setDay(day);
             rDay.setCourses(courses);
+            rDay.setId(GenerateDayIdentifier(rDay.getDay()));
+
             days.add(rDay);
         }
 

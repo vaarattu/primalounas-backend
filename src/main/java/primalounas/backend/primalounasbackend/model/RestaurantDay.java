@@ -5,6 +5,7 @@ import javax.persistence.*;
 import lombok.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,11 +15,23 @@ import java.util.List;
 public class RestaurantDay {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     private String day;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     private List<RestaurantCourse> courses;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RestaurantDay that = (RestaurantDay) o;
+        return day.equals(that.day);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(day);
+    }
 }

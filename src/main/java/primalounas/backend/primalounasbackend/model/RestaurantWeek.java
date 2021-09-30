@@ -20,6 +20,6 @@ public class RestaurantWeek {
 
     private String weekName;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany
     private List<RestaurantDay> days;
 }

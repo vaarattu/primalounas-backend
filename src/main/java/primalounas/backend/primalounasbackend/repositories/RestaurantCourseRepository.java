@@ -11,6 +11,4 @@ public interface RestaurantCourseRepository extends JpaRepository<RestaurantCour
 
     @Query(value = "SELECT * FROM Courses c WHERE c.name = :name", nativeQuery = true)
     RestaurantCourse findCourseByName(@Param("name") String name);
-
-
 }

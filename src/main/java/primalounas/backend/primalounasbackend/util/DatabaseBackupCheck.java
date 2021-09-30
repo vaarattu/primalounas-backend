@@ -2,11 +2,11 @@ package primalounas.backend.primalounasbackend.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.poi.hwpf.HWPFDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import primalounas.backend.primalounasbackend.model.RestaurantDay;
 import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 
@@ -48,8 +48,11 @@ public class DatabaseBackupCheck {
         log.info("[BACKUP] Parsed " + weeks.size() + " files.");
 
         int counter = 0;
-
         for (RestaurantWeek week : weeks) {
+            week.setId(Common.GenerateWeekIdentifier(week.getWeekName()));
+            for(RestaurantDay day : week.getDays()){
+                day.setId(Common.GenerateDayIdentifier(day.getDay()));
+            }
             RestaurantWeek dbWeek = restaurantMenuService.getWeekById(Common.GenerateWeekIdentifier(week.getWeekName()));
             if (dbWeek == null){
                 restaurantMenuService.addNewWeek(week);

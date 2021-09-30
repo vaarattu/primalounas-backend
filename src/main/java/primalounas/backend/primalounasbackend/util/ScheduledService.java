@@ -2,13 +2,10 @@ package primalounas.backend.primalounasbackend.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.poi.hpsf.SummaryInformation;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import primalounas.backend.primalounasbackend.model.RestaurantCourse;
-import primalounas.backend.primalounasbackend.model.RestaurantDay;
 import primalounas.backend.primalounasbackend.model.RestaurantWeek;
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 

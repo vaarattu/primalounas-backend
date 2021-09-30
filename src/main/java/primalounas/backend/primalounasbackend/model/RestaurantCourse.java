@@ -9,6 +9,7 @@ import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +20,7 @@ import java.util.List;
 public class RestaurantCourse {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String name;
@@ -31,4 +32,17 @@ public class RestaurantCourse {
     @Type(type = "list-array")
     @Column(name = "tags", columnDefinition = "text[]")
     private List<String> tags;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RestaurantCourse that = (RestaurantCourse) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }
