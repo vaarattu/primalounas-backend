@@ -14,8 +14,8 @@ public interface RestaurantMenuService {
     RestaurantWeek getWeekById(long id);
     RestaurantWeek addNewWeek(RestaurantWeek restaurantWeek);
 
-    List<CourseVote> getAllCourseVotes();
-    CourseVote updateCourseVote(CourseVote courseVote);
+    List<CourseVote> getAllVotes();
+    List<CourseVote> updateCourseVotes(List<CourseVote> courseVotes);
 
     List<FrequentCourse> getFrequentCourses();
 }

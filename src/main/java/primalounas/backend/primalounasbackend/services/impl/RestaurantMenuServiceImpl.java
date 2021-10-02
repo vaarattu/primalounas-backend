@@ -108,9 +108,10 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
                 course.setId(0);
 
                 CourseVote vote = new CourseVote();
-                vote.setVotes(0);
                 vote.setLikes(0);
                 vote.setDislikes(0);
+                vote.setVotes(0);
+                vote.setRanked(0);
                 vote.setCourse(course);
                 course.setCourseVote(vote);
 
@@ -129,12 +130,27 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
     }
 
     @Override
-    public List<CourseVote> getAllCourseVotes() {
+    public List<CourseVote> getAllVotes() {
+        log.info("[DB] Loading all from database.");
         return this.courseVoteRepository.findAll();
     }
 
     @Override
-    public CourseVote updateCourseVote(CourseVote courseVote) {
-        return this.courseVoteRepository.save(courseVote);
+    public List<CourseVote> updateCourseVotes(List<CourseVote> courseVotes) {
+        log.info("[DB] Updating votes for " + courseVotes.size() + " .");
+        List<CourseVote> votesInDB = this.courseVoteRepository.findAll();
+
+        for(CourseVote voteDB : votesInDB) {
+            for(CourseVote vote : courseVotes) {
+                if (voteDB.getId() == vote.getId()){
+                    voteDB.setVotes(voteDB.getVotes() + vote.getVotes());
+                    voteDB.setRanked(voteDB.getRanked() + vote.getRanked());
+                    voteDB.setLikes(voteDB.getLikes() + vote.getLikes());
+                    voteDB.setDislikes(voteDB.getDislikes() + vote.getDislikes());
+                }
+            }
+        }
+
+        return this.courseVoteRepository.saveAll(votesInDB);
     }
 }

@@ -24,6 +24,8 @@ public class CourseVote {
 
     private int votes;
 
+    private int ranked;
+
     @OneToOne
     @MapsId
     @JoinColumn(name = "course_id")
