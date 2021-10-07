@@ -31,7 +31,7 @@ public class RestaurantMenuController {
 	}
 
 	@GetMapping(value = "/all")
-	public ResponseEntity<Object> getAll() {
+	public ResponseEntity<Object> getAllWeekMenus() {
 		try {
 			return ResponseEntity.ok(this.restaurantMenuService.getAllWeeks());
 		} catch (Exception ex){
@@ -48,25 +48,34 @@ public class RestaurantMenuController {
 		}
 	}
 
+	@GetMapping(value = "/courses")
+	public ResponseEntity<Object> getAllCourses() {
+		try {
+			return ResponseEntity.ok(this.restaurantMenuService.getAllCourses());
+		} catch (Exception ex){
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+		}
+	}
+
 	@PostMapping(value = "/vote")
-	public ResponseEntity<Object> postVoteCourse(@RequestBody String body) {
+	public ResponseEntity<Object> postCourseVotes(@RequestBody String body) {
 		String errorText = "";
 		List<CourseVote> courseVotes;
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			CourseVote[] votes = mapper.readValue(body, CourseVote[].class);
-			courseVotes = Arrays.asList(votes);
+			List<CourseVote> dbVotes = courseVotes = Arrays.asList(votes);
 			this.restaurantMenuService.updateCourseVotes(courseVotes);
-			return ResponseEntity.status(HttpStatus.OK).body(null);
+			return ResponseEntity.status(HttpStatus.OK).body(dbVotes);
 		} catch (Exception ex) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorText);
 		}
 	}
 
-	@GetMapping(value = "/votes")
-	public ResponseEntity<Object> getAllVotes() {
+	@GetMapping(value = "/maintenance/download-latest")
+	public ResponseEntity<Object> getLatestMenu() {
 		try {
-			return ResponseEntity.ok(this.restaurantMenuService.getAllVotes());
+			return ResponseEntity.ok(this.restaurantMenuService.getAllCourses());
 		} catch (Exception ex){
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
 		}

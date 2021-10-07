@@ -1,22 +1,22 @@
-2021-10-02 10:53:13.490  INFO 16028 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 16028 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 10:53:13.497  INFO 16028 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 10:53:13.565  WARN 16028 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 10:53:13.567  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 10:53:13.567  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 10:53:14.295  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 10:53:14.358  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
-2021-10-02 10:53:15.219  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 10:53:15.228  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 10:53:15.228  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 10:53:15.303  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 10:53:15.303  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1735 ms
-2021-10-02 10:53:15.541  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 10:53:15.601  INFO 16028 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 10:53:15.740  INFO 16028 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 10:53:15.845  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 10:53:16.057  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 10:53:16.073  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 10:53:16.468  INFO 16028 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
+2021-10-07 11:30:11.282  INFO 4440 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 4440 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
+2021-10-07 11:30:11.289  INFO 4440 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
+2021-10-07 11:30:11.366  WARN 4440 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
+2021-10-07 11:30:11.392  INFO 4440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-07 11:30:11.392  INFO 4440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-07 11:30:12.010  INFO 4440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-07 11:30:12.086  INFO 4440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+2021-10-07 11:30:12.907  INFO 4440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-10-07 11:30:12.917  INFO 4440 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-07 11:30:12.917  INFO 4440 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-10-07 11:30:12.989  INFO 4440 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-07 11:30:12.989  INFO 4440 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1597 ms
+2021-10-07 11:30:13.215  INFO 4440 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-07 11:30:13.275  INFO 4440 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-07 11:30:13.440  INFO 4440 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-07 11:30:13.551  INFO 4440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-07 11:30:13.773  INFO 4440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-07 11:30:13.790  INFO 4440 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
+2021-10-07 11:30:14.231  INFO 4440 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  _    _                           _     _
@@ -37,96 +37,49 @@ Hypersistence Optimizer is that tool! For more details, go to:
 https://vladmihalcea.com/hypersistence-optimizer/
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-2021-10-02 10:53:16.881  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table if exists course_votes add column ranked int4 not null" via JDBC Statement
-
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table if exists course_votes add column ranked int4 not null" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:562) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:583) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:297) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:75) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar:5.3.9]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar:5.3.9]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar:5.3.9]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar:5.3.9]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar:5.3.9]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar:5.3.9]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
-	at primalounas.backend.primalounasbackend.Application.main(Application.java:18) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.3.jar:2.5.3]
-Caused by: org.postgresql.util.PSQLException: ERROR: column "ranked" of relation "course_votes" contains null values
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552) ~[postgresql-42.2.23.jar:42.2.23]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284) ~[postgresql-42.2.23.jar:42.2.23]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322) ~[postgresql-42.2.23.jar:42.2.23]
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481) ~[postgresql-42.2.23.jar:42.2.23]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401) ~[postgresql-42.2.23.jar:42.2.23]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322) ~[postgresql-42.2.23.jar:42.2.23]
-	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308) ~[postgresql-42.2.23.jar:42.2.23]
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284) ~[postgresql-42.2.23.jar:42.2.23]
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279) ~[postgresql-42.2.23.jar:42.2.23]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
-	... 39 common frames omitted
-
-2021-10-02 10:53:17.213  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 10:53:17.219  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 10:53:17.700  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 10:53:18.044  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 10:53:18.081  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 10:53:18.095  INFO 16028 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 5.111 seconds (JVM running for 5.667)
-2021-10-02 10:53:18.099  INFO 16028 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 10:53:18.104  INFO 16028 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 10:53:18.252  INFO 16028 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 10:53:18.314  INFO 16028 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 10:55:14.087  INFO 16028 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 10:55:14.091  INFO 16028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 10:55:14.097  INFO 16028 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 11:42:46.069  INFO 20200 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 20200 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 11:42:46.071  INFO 20200 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 11:42:46.121  WARN 20200 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 11:42:46.122  INFO 20200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 11:42:46.125  INFO 20200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 11:42:46.735  INFO 20200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 11:42:46.794  INFO 20200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
-2021-10-02 11:42:47.757  INFO 20200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 11:42:47.768  INFO 20200 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 11:42:47.768  INFO 20200 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 11:42:47.854  INFO 20200 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 11:42:47.854  INFO 20200 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1729 ms
-2021-10-02 11:42:48.252  INFO 20200 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 11:42:48.318  INFO 20200 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 11:42:48.493  INFO 20200 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 11:42:48.607  INFO 20200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 11:42:48.789  INFO 20200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 11:42:48.806  INFO 20200 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 11:42:49.208  INFO 20200 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
+2021-10-07 11:30:14.968  INFO 4440 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-07 11:30:14.975  INFO 4440 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-07 11:30:15.460  WARN 4440 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-07 11:30:15.834  INFO 4440 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-07 11:30:15.870  INFO 4440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-10-07 11:30:15.888  INFO 4440 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 5.134 seconds (JVM running for 5.762)
+2021-10-07 11:30:15.891  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
+2021-10-07 11:30:15.896  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 4 files.
+2021-10-07 11:30:16.055  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 4 files.
+2021-10-07 11:30:16.112  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
+2021-10-07 11:30:16.112  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Fetching current menu.
+2021-10-07 11:30:16.112  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Downloading file from google drive.
+2021-10-07 11:30:17.673  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Parsing week menu from document.
+2021-10-07 11:30:17.689  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Checking NeedToSaveOrUpdateDatabase.
+2021-10-07 11:30:17.691  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Checking LastSavedChanged, are equal: true
+2021-10-07 11:30:17.699  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] JSON file with path : ./data_docs/202140.json exists in folder: true
+2021-10-07 11:30:17.699  INFO 4440 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Successfully parsed week menu.
+2021-10-07 11:30:19.895  INFO 4440 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-07 11:30:19.897  INFO 4440 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-07 11:30:19.898  INFO 4440 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-07 11:30:19.912  INFO 4440 --- [http-nio-8888-exec-2] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading restaurant courses all from database.
+2021-10-07 15:40:18.024  INFO 4440 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-07 15:40:18.027  INFO 4440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-07 15:40:18.033  INFO 4440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-07 15:40:21.863  INFO 18092 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 18092 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
+2021-10-07 15:40:21.864  INFO 18092 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
+2021-10-07 15:40:21.924  WARN 18092 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
+2021-10-07 15:40:21.925  INFO 18092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-07 15:40:21.927  INFO 18092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-07 15:40:22.465  INFO 18092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-07 15:40:22.516  INFO 18092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+2021-10-07 15:40:23.246  INFO 18092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-10-07 15:40:23.256  INFO 18092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-07 15:40:23.256  INFO 18092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-10-07 15:40:23.319  INFO 18092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-07 15:40:23.319  INFO 18092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1392 ms
+2021-10-07 15:40:23.523  INFO 18092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-07 15:40:23.589  INFO 18092 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-07 15:40:23.711  INFO 18092 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-07 15:40:23.785  INFO 18092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-07 15:40:23.947  INFO 18092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-07 15:40:23.960  INFO 18092 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
+2021-10-07 15:40:24.303  INFO 18092 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  _    _                           _     _
@@ -147,464 +100,31 @@ Hypersistence Optimizer is that tool! For more details, go to:
 https://vladmihalcea.com/hypersistence-optimizer/
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-2021-10-02 11:42:49.683  WARN 20200 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
-2021-10-02 11:42:49.683  WARN 20200 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_nwykbia0raww21csjm0hposwd" of relation "weeks_days" does not exist, skipping
-2021-10-02 11:42:49.699  INFO 20200 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 11:42:49.707  INFO 20200 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 11:42:50.341  WARN 20200 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 11:42:51.031  INFO 20200 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 11:42:51.080  INFO 20200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 11:42:51.101  INFO 20200 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 5.563 seconds (JVM running for 6.182)
-2021-10-02 11:42:51.106  INFO 20200 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 11:42:51.109  INFO 20200 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 11:42:51.217  INFO 20200 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 11:42:51.274  INFO 20200 --- [restartedMain] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Saving new week to database with id 202136.
-2021-10-02 11:42:51.546  INFO 20200 --- [restartedMain] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Saving new week to database with id 202137.
-2021-10-02 11:42:51.607  INFO 20200 --- [restartedMain] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Saving new week to database with id 202138.
-2021-10-02 11:42:51.654  INFO 20200 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 3 files to database.
-2021-10-02 11:43:16.022  INFO 20200 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 11:43:16.025  INFO 20200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 11:43:16.032  INFO 20200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 11:43:20.074  INFO 14328 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 14328 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 11:43:20.075  INFO 14328 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 11:43:20.126  WARN 14328 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 11:43:20.128  INFO 14328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 11:43:20.128  INFO 14328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 11:43:20.716  INFO 14328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 11:43:20.782  INFO 14328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
-2021-10-02 11:43:21.694  INFO 14328 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 11:43:21.707  INFO 14328 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 11:43:21.707  INFO 14328 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 11:43:21.790  INFO 14328 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 11:43:21.790  INFO 14328 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1660 ms
-2021-10-02 11:43:22.063  INFO 14328 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 11:43:22.122  INFO 14328 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 11:43:22.265  INFO 14328 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 11:43:22.390  INFO 14328 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 11:43:22.591  INFO 14328 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 11:43:22.610  INFO 14328 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 11:43:22.991  INFO 14328 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- _    _                           _     _
-| |  | |                         (_)   | |
-| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
-|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
-| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
-|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
-         __/ | |
-        |___/|_|
-
-At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
-
-What if there were a tool that could automatically detect JPA and Hibernate performance issues?
-
-Hypersistence Optimizer is that tool! For more details, go to: 
-
-https://vladmihalcea.com/hypersistence-optimizer/
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-2021-10-02 11:43:23.714  INFO 14328 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 11:43:23.723  INFO 14328 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 11:43:24.275  WARN 14328 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 11:43:24.787  INFO 14328 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 11:43:24.829  INFO 14328 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 11:43:24.846  INFO 14328 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 5.237 seconds (JVM running for 5.722)
-2021-10-02 11:43:24.851  INFO 14328 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 11:43:24.858  INFO 14328 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 11:43:24.950  INFO 14328 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 11:43:25.020  INFO 14328 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 11:43:33.798  INFO 14328 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-02 11:43:33.799  INFO 14328 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-02 11:43:33.800  INFO 14328 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-10-02 11:43:33.810  WARN 14328 --- [http-nio-8888-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2021-10-02 11:43:43.904  WARN 14328 --- [http-nio-8888-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> primalounas.backend.primalounasbackend.controller.RestaurantMenuController.postVoteCourse(java.lang.String)]
-2021-10-02 11:44:34.389  INFO 14328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 11:44:34.392  INFO 14328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 11:44:34.401  INFO 14328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 11:44:38.440  INFO 14776 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 14776 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 11:44:38.441  INFO 14776 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 11:44:38.495  WARN 14776 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 11:44:38.497  INFO 14776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 11:44:38.497  INFO 14776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 11:44:39.072  INFO 14776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 11:44:39.130  INFO 14776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
-2021-10-02 11:44:39.972  INFO 14776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 11:44:39.983  INFO 14776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 11:44:39.984  INFO 14776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 11:44:40.053  INFO 14776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 11:44:40.053  INFO 14776 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1554 ms
-2021-10-02 11:44:40.272  INFO 14776 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 11:44:40.325  INFO 14776 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 11:44:40.469  INFO 14776 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 11:44:40.572  INFO 14776 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 11:44:40.751  INFO 14776 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 11:44:40.765  INFO 14776 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 11:44:41.161  INFO 14776 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- _    _                           _     _
-| |  | |                         (_)   | |
-| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
-|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
-| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
-|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
-         __/ | |
-        |___/|_|
-
-At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
-
-What if there were a tool that could automatically detect JPA and Hibernate performance issues?
-
-Hypersistence Optimizer is that tool! For more details, go to: 
-
-https://vladmihalcea.com/hypersistence-optimizer/
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-2021-10-02 11:44:41.896  INFO 14776 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 11:44:41.904  INFO 14776 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 11:44:42.475  WARN 14776 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 11:44:42.909  INFO 14776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 11:44:42.946  INFO 14776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 11:44:42.967  INFO 14776 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 4.994 seconds (JVM running for 5.464)
-2021-10-02 11:44:42.971  INFO 14776 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 11:44:42.974  INFO 14776 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 11:44:43.050  INFO 14776 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 11:44:43.111  INFO 14776 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 11:45:08.866  INFO 14776 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-02 11:45:08.867  INFO 14776 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-02 11:45:08.868  INFO 14776 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-10-02 11:50:22.079  INFO 14776 --- [http-nio-8888-exec-5] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading all from database.
-2021-10-02 11:59:11.149  INFO 14776 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 11:59:11.152  INFO 14776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 11:59:11.160  INFO 14776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 11:59:28.717  INFO 20600 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 20600 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 11:59:28.718  INFO 20600 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 11:59:28.772  WARN 20600 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 11:59:28.774  INFO 20600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 11:59:28.774  INFO 20600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 11:59:29.408  INFO 20600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 11:59:29.469  INFO 20600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
-2021-10-02 11:59:30.318  INFO 20600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 11:59:30.328  INFO 20600 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 11:59:30.329  INFO 20600 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 11:59:30.405  INFO 20600 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 11:59:30.405  INFO 20600 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1629 ms
-2021-10-02 11:59:30.655  INFO 20600 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 11:59:30.708  INFO 20600 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 11:59:30.840  INFO 20600 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 11:59:30.944  INFO 20600 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 11:59:31.121  INFO 20600 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 11:59:31.136  INFO 20600 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 11:59:31.530  INFO 20600 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- _    _                           _     _
-| |  | |                         (_)   | |
-| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
-|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
-| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
-|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
-         __/ | |
-        |___/|_|
-
-At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
-
-What if there were a tool that could automatically detect JPA and Hibernate performance issues?
-
-Hypersistence Optimizer is that tool! For more details, go to: 
-
-https://vladmihalcea.com/hypersistence-optimizer/
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-2021-10-02 11:59:32.258  INFO 20600 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 11:59:32.266  INFO 20600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 11:59:32.795  WARN 20600 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 11:59:33.203  INFO 20600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 11:59:33.240  INFO 20600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 11:59:33.254  INFO 20600 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 5.006 seconds (JVM running for 5.45)
-2021-10-02 11:59:33.257  INFO 20600 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 11:59:33.261  INFO 20600 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 11:59:33.349  INFO 20600 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 11:59:33.413  INFO 20600 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 11:59:35.664  INFO 20600 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-02 11:59:35.666  INFO 20600 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-02 11:59:35.667  INFO 20600 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2021-10-02 11:59:35.681  INFO 20600 --- [http-nio-8888-exec-2] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading all from database.
-2021-10-02 12:09:06.758  INFO 20600 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:09:06.762  INFO 20600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 12:09:06.770  INFO 20600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 12:09:10.066  INFO 6968 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 6968 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 12:09:10.067  INFO 6968 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 12:09:10.116  WARN 6968 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 12:09:10.118  INFO 6968 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 12:09:10.119  INFO 6968 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 12:09:10.855  INFO 6968 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 12:09:10.933  INFO 6968 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
-2021-10-02 12:09:12.037  INFO 6968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 12:09:12.055  INFO 6968 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 12:09:12.056  INFO 6968 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 12:09:12.172  INFO 6968 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 12:09:12.172  INFO 6968 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2052 ms
-2021-10-02 12:09:12.599  INFO 6968 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 12:09:12.684  INFO 6968 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 12:09:13.041  INFO 6968 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 12:09:13.276  INFO 6968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 12:09:13.655  INFO 6968 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 12:09:13.680  INFO 6968 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 12:09:14.340  INFO 6968 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- _    _                           _     _
-| |  | |                         (_)   | |
-| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
-|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
-| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
-|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
-         __/ | |
-        |___/|_|
-
-At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
-
-What if there were a tool that could automatically detect JPA and Hibernate performance issues?
-
-Hypersistence Optimizer is that tool! For more details, go to: 
-
-https://vladmihalcea.com/hypersistence-optimizer/
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-2021-10-02 12:09:15.207  INFO 6968 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 12:09:15.216  INFO 6968 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:09:16.140  WARN 6968 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 12:09:16.737  INFO 6968 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 12:09:16.793  INFO 6968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 12:09:16.811  INFO 6968 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 7.353 seconds (JVM running for 8.506)
-2021-10-02 12:09:16.817  INFO 6968 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 12:09:16.822  INFO 6968 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 12:09:16.952  INFO 6968 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 12:09:17.073  INFO 6968 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 12:09:43.457  INFO 6968 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:09:43.461  INFO 6968 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 12:09:43.468  INFO 6968 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 12:09:46.836  INFO 21564 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 21564 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 12:09:46.838  INFO 21564 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 12:09:46.913  WARN 21564 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 12:09:46.916  INFO 21564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 12:09:46.917  INFO 21564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 12:09:47.644  INFO 21564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 12:09:47.724  INFO 21564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
-2021-10-02 12:09:48.935  INFO 21564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 12:09:48.948  INFO 21564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 12:09:48.949  INFO 21564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 12:09:49.041  INFO 21564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 12:09:49.042  INFO 21564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2125 ms
-2021-10-02 12:09:49.426  INFO 21564 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 12:09:49.524  INFO 21564 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 12:09:49.804  INFO 21564 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 12:09:50.011  INFO 21564 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 12:09:50.304  INFO 21564 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 12:09:50.329  INFO 21564 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 12:09:51.331  INFO 21564 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- _    _                           _     _
-| |  | |                         (_)   | |
-| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
-|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
-| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
-|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
-         __/ | |
-        |___/|_|
-
-At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
-
-What if there were a tool that could automatically detect JPA and Hibernate performance issues?
-
-Hypersistence Optimizer is that tool! For more details, go to: 
-
-https://vladmihalcea.com/hypersistence-optimizer/
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-2021-10-02 12:09:52.143  INFO 21564 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 12:09:52.150  INFO 21564 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:09:52.822  WARN 21564 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 12:09:53.377  INFO 21564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 12:09:53.429  INFO 21564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 12:09:53.449  INFO 21564 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 7.33 seconds (JVM running for 8.188)
-2021-10-02 12:09:53.454  INFO 21564 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 12:09:53.459  INFO 21564 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 12:09:53.560  INFO 21564 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 12:09:53.652  INFO 21564 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 12:10:34.502  INFO 21564 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-02 12:10:34.502  INFO 21564 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-02 12:10:34.504  INFO 21564 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-10-02 12:12:45.757  WARN 21564 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m25s340ms605µs200ns).
-2021-10-02 12:13:48.157  INFO 21564 --- [http-nio-8888-exec-2] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 2 .
-2021-10-02 12:14:02.410  INFO 21564 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:14:02.413  INFO 21564 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 12:14:02.421  INFO 21564 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 12:14:04.473  INFO 1392 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 1392 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 12:14:04.475  INFO 1392 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 12:14:04.543  WARN 1392 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 12:14:04.545  INFO 1392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 12:14:04.545  INFO 1392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 12:14:05.160  INFO 1392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 12:14:05.228  INFO 1392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
-2021-10-02 12:14:06.194  INFO 1392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 12:14:06.208  INFO 1392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 12:14:06.208  INFO 1392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 12:14:06.297  INFO 1392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 12:14:06.298  INFO 1392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1753 ms
-2021-10-02 12:14:06.637  INFO 1392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 12:14:06.712  INFO 1392 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 12:14:06.901  INFO 1392 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 12:14:07.044  INFO 1392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 12:14:07.283  INFO 1392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 12:14:07.304  INFO 1392 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 12:14:07.828  INFO 1392 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- _    _                           _     _
-| |  | |                         (_)   | |
-| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
-|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
-| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
-|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
-         __/ | |
-        |___/|_|
-
-At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
-
-What if there were a tool that could automatically detect JPA and Hibernate performance issues?
-
-Hypersistence Optimizer is that tool! For more details, go to: 
-
-https://vladmihalcea.com/hypersistence-optimizer/
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-2021-10-02 12:14:08.901  INFO 1392 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 12:14:08.909  INFO 1392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:14:09.577  WARN 1392 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 12:14:10.109  INFO 1392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 12:14:10.153  INFO 1392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 12:14:10.171  INFO 1392 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 6.299 seconds (JVM running for 6.941)
-2021-10-02 12:14:10.174  INFO 1392 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 12:14:10.179  INFO 1392 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 12:14:10.310  INFO 1392 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 12:14:10.424  INFO 1392 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 12:15:05.422  INFO 1392 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:15:05.425  INFO 1392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 12:15:05.432  INFO 1392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 12:15:08.518  INFO 21356 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 21356 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 12:15:08.519  INFO 21356 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 12:15:08.570  WARN 21356 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 12:15:08.571  INFO 21356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 12:15:08.571  INFO 21356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 12:15:09.168  INFO 21356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 12:15:09.235  INFO 21356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
-2021-10-02 12:15:10.182  INFO 21356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 12:15:10.195  INFO 21356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 12:15:10.195  INFO 21356 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 12:15:10.287  INFO 21356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 12:15:10.287  INFO 21356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1715 ms
-2021-10-02 12:15:10.611  INFO 21356 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 12:15:10.679  INFO 21356 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 12:15:10.897  INFO 21356 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 12:15:11.029  INFO 21356 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 12:15:11.254  INFO 21356 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 12:15:11.272  INFO 21356 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 12:15:11.726  INFO 21356 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- _    _                           _     _
-| |  | |                         (_)   | |
-| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
-|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
-| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
-|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
-         __/ | |
-        |___/|_|
-
-At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
-
-What if there were a tool that could automatically detect JPA and Hibernate performance issues?
-
-Hypersistence Optimizer is that tool! For more details, go to: 
-
-https://vladmihalcea.com/hypersistence-optimizer/
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-2021-10-02 12:15:12.441  INFO 21356 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 12:15:12.449  INFO 21356 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:15:13.359  WARN 21356 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 12:15:13.835  INFO 21356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 12:15:13.884  INFO 21356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 12:15:13.903  INFO 21356 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 5.904 seconds (JVM running for 6.474)
-2021-10-02 12:15:13.909  INFO 21356 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 12:15:13.914  INFO 21356 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 12:15:14.018  INFO 21356 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 12:15:14.103  INFO 21356 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 12:15:48.910  INFO 21356 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-02 12:15:48.911  INFO 21356 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-02 12:15:48.912  INFO 21356 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2021-10-02 12:15:48.953  INFO 21356 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 2 .
-2021-10-02 12:17:16.071  INFO 21356 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 2 .
-2021-10-02 12:17:24.527  INFO 21356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:17:24.530  INFO 21356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 12:17:24.538  INFO 21356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-02 12:17:26.432  INFO 6936 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 6936 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-02 12:17:26.434  INFO 6936 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-02 12:17:26.491  WARN 6936 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-02 12:17:26.494  INFO 6936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-02 12:17:26.495  INFO 6936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-02 12:17:27.076  INFO 6936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-02 12:17:27.142  INFO 6936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
-2021-10-02 12:17:28.022  INFO 6936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-02 12:17:28.031  INFO 6936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-02 12:17:28.031  INFO 6936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-02 12:17:28.107  INFO 6936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-02 12:17:28.107  INFO 6936 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1611 ms
-2021-10-02 12:17:28.344  INFO 6936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-02 12:17:28.400  INFO 6936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-02 12:17:28.559  INFO 6936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-02 12:17:28.675  INFO 6936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-02 12:17:28.853  INFO 6936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-02 12:17:28.871  INFO 6936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-02 12:17:29.255  INFO 6936 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
- _    _                           _     _
-| |  | |                         (_)   | |
-| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
-|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
-| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
-|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
-         __/ | |
-        |___/|_|
-
-At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
-
-What if there were a tool that could automatically detect JPA and Hibernate performance issues?
-
-Hypersistence Optimizer is that tool! For more details, go to: 
-
-https://vladmihalcea.com/hypersistence-optimizer/
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-2021-10-02 12:17:29.995  INFO 6936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-02 12:17:30.003  INFO 6936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:17:30.642  WARN 6936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-02 12:17:31.288  INFO 6936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-02 12:17:31.340  INFO 6936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-02 12:17:31.360  INFO 6936 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 5.467 seconds (JVM running for 6.037)
-2021-10-02 12:17:31.366  INFO 6936 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-02 12:17:31.373  INFO 6936 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 3 files.
-2021-10-02 12:17:31.479  INFO 6936 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 3 files.
-2021-10-02 12:17:31.553  INFO 6936 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-02 12:17:38.937  INFO 6936 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-02 12:17:38.938  INFO 6936 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-02 12:17:38.939  INFO 6936 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-10-02 12:17:38.973  INFO 6936 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 2 .
-2021-10-02 12:18:21.778  INFO 6936 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-02 12:18:21.781  INFO 6936 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-02 12:18:21.789  INFO 6936 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-07 15:40:24.956  INFO 18092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-07 15:40:24.962  INFO 18092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-07 15:40:25.343  WARN 18092 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-07 15:40:25.732  INFO 18092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-07 15:40:25.761  INFO 18092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-10-07 15:40:25.773  INFO 18092 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 4.314 seconds (JVM running for 6.015)
+2021-10-07 15:40:25.776  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
+2021-10-07 15:40:25.779  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 4 files.
+2021-10-07 15:40:25.879  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 4 files.
+2021-10-07 15:40:25.930  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
+2021-10-07 15:40:25.931  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Fetching current menu.
+2021-10-07 15:40:25.931  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Downloading file from google drive.
+2021-10-07 15:40:27.201  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Parsing week menu from document.
+2021-10-07 15:40:27.213  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Checking NeedToSaveOrUpdateDatabase.
+2021-10-07 15:40:27.216  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Checking LastSavedChanged, are equal: true
+2021-10-07 15:40:27.222  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] JSON file with path : ./data_docs/202140.json exists in folder: true
+2021-10-07 15:40:27.223  INFO 18092 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Successfully parsed week menu.
+2021-10-07 15:41:13.144  INFO 18092 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-07 15:41:13.145  INFO 18092 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-07 15:41:13.146  INFO 18092 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-10-07 15:41:13.163  INFO 18092 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading all restaurant weeks from database.
+2021-10-07 15:44:32.031  INFO 18092 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading most frequent occurring courses from database.
+2021-10-07 15:54:36.999  INFO 18092 --- [http-nio-8888-exec-5] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading current and next weeks from database.
+2021-10-07 15:54:37.001  INFO 18092 --- [http-nio-8888-exec-5] p.b.primalounasbackend.util.Common       : [COMMON] Next week identifier: 202141
+2021-10-07 15:54:37.002  INFO 18092 --- [http-nio-8888-exec-5] p.b.primalounasbackend.util.Common       : [COMMON] Current week identifier: 202140
+2021-10-07 16:25:27.180  INFO 18092 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-07 16:25:27.182  INFO 18092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-07 16:25:27.188  INFO 18092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -37,7 +37,7 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
     @Cacheable("allWeeks")
     @Override
     public List<RestaurantWeek> getAllWeeks() {
-        log.info("[DB] Loading all from database.");
+        log.info("[DB] Loading all restaurant weeks from database.");
         return this.restaurantMenuRepository.findAll();
     }
 
@@ -66,7 +66,7 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
     @Cacheable("frequentCourses")
     @Override
     public List<FrequentCourse> getFrequentCourses() {
-        log.info("[DB] Loading frequent courses from database.");
+        log.info("[DB] Loading most frequent occurring courses from database.");
         List<RestaurantDay> days = this.restaurantDayRepository.findAll();
         HashMap<String, Integer> frequentCoursesMap = new HashMap<>();
 
@@ -101,7 +101,7 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
     @CacheEvict(allEntries=true)
     @Override
     public RestaurantWeek addNewWeek(RestaurantWeek restaurantWeek) {
-        log.info("[DB] Saving new week to database with id " + restaurantWeek.getId() + ".");
+        log.info("[DB] Saving new week to database with id: " + restaurantWeek.getId() + ".");
 
         for (RestaurantDay day : restaurantWeek.getDays()) {
             for (RestaurantCourse course : day.getCourses()) {
@@ -130,14 +130,14 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
     }
 
     @Override
-    public List<CourseVote> getAllVotes() {
-        log.info("[DB] Loading all from database.");
-        return this.courseVoteRepository.findAll();
+    public List<RestaurantCourse> getAllCourses() {
+        log.info("[DB] Loading restaurant courses all from database.");
+        return this.restaurantCourseRepository.findAll();
     }
 
     @Override
     public List<CourseVote> updateCourseVotes(List<CourseVote> courseVotes) {
-        log.info("[DB] Updating votes for " + courseVotes.size() + " .");
+        log.info("[DB] Updating votes for " + courseVotes.size() + " courses.");
         List<CourseVote> votesInDB = this.courseVoteRepository.findAll();
 
         for(CourseVote voteDB : votesInDB) {
