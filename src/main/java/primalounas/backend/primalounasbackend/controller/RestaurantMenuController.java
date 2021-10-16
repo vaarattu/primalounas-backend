@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -57,26 +58,30 @@ public class RestaurantMenuController {
 		}
 	}
 
-	@PostMapping(value = "/vote")
+	@PostMapping(value = "/votes")
 	public ResponseEntity<Object> postCourseVotes(@RequestBody String body) {
-		String errorText = "";
-		List<CourseVote> courseVotes;
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			CourseVote[] votes = mapper.readValue(body, CourseVote[].class);
-			List<CourseVote> dbVotes = courseVotes = Arrays.asList(votes);
-			this.restaurantMenuService.updateCourseVotes(courseVotes);
+			List<CourseVote> courseVotes = Arrays.asList(votes);
+			List<CourseVote> dbVotes = this.restaurantMenuService.updateCourseVotes(courseVotes);
 			return ResponseEntity.status(HttpStatus.OK).body(dbVotes);
 		} catch (Exception ex) {
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorText);
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
 		}
 	}
 
-	@GetMapping(value = "/maintenance/download-latest")
-	public ResponseEntity<Object> getLatestMenu() {
+	@PostMapping(value = "/vote")
+	public ResponseEntity<Object> postCourseVote(@RequestBody String body) {
 		try {
-			return ResponseEntity.ok(this.restaurantMenuService.getAllCourses());
-		} catch (Exception ex){
+			ObjectMapper mapper = new ObjectMapper();
+			CourseVote[] votes = mapper.readValue(body, CourseVote[].class);
+			List<CourseVote> courseVotes = Arrays.asList(votes);
+			CourseVote dbVote = this.restaurantMenuService.updateCourseVote(courseVotes.get(0));
+			List<CourseVote> dbVotes = new ArrayList<>();
+			dbVotes.add(dbVote);
+			return ResponseEntity.status(HttpStatus.OK).body(dbVotes);
+		} catch (Exception ex) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
 		}
 	}

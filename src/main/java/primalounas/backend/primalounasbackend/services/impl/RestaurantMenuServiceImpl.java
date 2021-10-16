@@ -17,7 +17,7 @@ import primalounas.backend.primalounasbackend.repositories.RestaurantMenuReposit
 import primalounas.backend.primalounasbackend.services.RestaurantMenuService;
 import primalounas.backend.primalounasbackend.util.Common;
 
-@CacheConfig(cacheNames = {"allWeeks", "currentWeek", "frequentCourses"})
+@CacheConfig(cacheNames = {"allWeeks", "currentWeek", "frequentCourses", "allCourses"})
 @Service
 @Slf4j
 public class RestaurantMenuServiceImpl implements RestaurantMenuService {
@@ -129,12 +129,14 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
         return this.restaurantMenuRepository.saveAndFlush(restaurantWeek);
     }
 
+    @Cacheable("allCourses")
     @Override
     public List<RestaurantCourse> getAllCourses() {
         log.info("[DB] Loading restaurant courses all from database.");
         return this.restaurantCourseRepository.findAll();
     }
 
+    @CacheEvict("allCourses")
     @Override
     public List<CourseVote> updateCourseVotes(List<CourseVote> courseVotes) {
         log.info("[DB] Updating votes for " + courseVotes.size() + " courses.");
@@ -152,5 +154,26 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
         }
 
         return this.courseVoteRepository.saveAll(votesInDB);
+    }
+
+    @CacheEvict("allCourses")
+    @Override
+    public CourseVote updateCourseVote(CourseVote courseVote) {
+        log.info("[DB] Updating votes for " + courseVote.getId() + " course.");
+
+        Optional<CourseVote> voteInDB = this.courseVoteRepository.findById(courseVote.getId());
+
+        if (voteInDB.isPresent()) {
+            CourseVote voteDB = voteInDB.get();
+
+            voteDB.setVotes(voteDB.getVotes() + courseVote.getVotes());
+            voteDB.setRanked(voteDB.getRanked() + courseVote.getRanked());
+            voteDB.setLikes(voteDB.getLikes() + courseVote.getLikes());
+            voteDB.setDislikes(voteDB.getDislikes() + courseVote.getDislikes());
+
+            return this.courseVoteRepository.save(voteDB);
+        }
+
+        return null;
     }
 }

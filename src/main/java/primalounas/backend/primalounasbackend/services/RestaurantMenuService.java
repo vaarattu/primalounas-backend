@@ -17,6 +17,7 @@ public interface RestaurantMenuService {
 
     List<RestaurantCourse> getAllCourses();
     List<CourseVote> updateCourseVotes(List<CourseVote> courseVotes);
+    CourseVote updateCourseVote(CourseVote courseVote);
 
     List<FrequentCourse> getFrequentCourses();
 }
