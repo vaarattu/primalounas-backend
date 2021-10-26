@@ -1,22 +1,22 @@
-2021-10-15 11:59:33.972  INFO 12984 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 12984 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
-2021-10-15 11:59:33.977  INFO 12984 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
-2021-10-15 11:59:34.017  WARN 12984 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
-2021-10-15 11:59:34.019  INFO 12984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-10-15 11:59:34.019  INFO 12984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-10-15 11:59:34.755  INFO 12984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-10-15 11:59:34.816  INFO 12984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
-2021-10-15 11:59:35.626  INFO 12984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2021-10-15 11:59:35.636  INFO 12984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-15 11:59:35.637  INFO 12984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-10-15 11:59:35.708  INFO 12984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-15 11:59:35.709  INFO 12984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1689 ms
-2021-10-15 11:59:35.957  INFO 12984 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-15 11:59:36.030  INFO 12984 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-15 11:59:36.176  INFO 12984 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-15 11:59:36.275  INFO 12984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-15 11:59:36.493  INFO 12984 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-15 11:59:36.509  INFO 12984 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
-2021-10-15 11:59:36.976  INFO 12984 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
+2021-10-26 16:52:25.968  INFO 9048 --- [restartedMain] p.b.primalounasbackend.Application       : Starting Application using Java 11.0.12 on DESKTOP-DANGER with PID 9048 (D:\Github\Java\primalounas-backend\target\classes started by Juha in D:\Github\Java\primalounas-backend)
+2021-10-26 16:52:25.984  INFO 9048 --- [restartedMain] p.b.primalounasbackend.Application       : The following profiles are active: dev
+2021-10-26 16:52:26.032  WARN 9048 --- [restartedMain] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 27:13]
+2021-10-26 16:52:26.055  INFO 9048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-26 16:52:26.055  INFO 9048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-26 16:52:26.853  INFO 9048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-26 16:52:26.913  INFO 9048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2021-10-26 16:52:27.790  INFO 9048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-10-26 16:52:27.804  INFO 9048 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 16:52:27.805  INFO 9048 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-10-26 16:52:27.887  INFO 9048 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 16:52:27.888  INFO 9048 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1832 ms
+2021-10-26 16:52:28.143  INFO 9048 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 16:52:28.225  INFO 9048 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 16:52:28.425  INFO 9048 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 16:52:28.544  INFO 9048 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 16:52:28.835  INFO 9048 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 16:52:28.854  INFO 9048 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: primalounas.backend.primalounasbackend.config.PostgreSQL95CustomDialect
+2021-10-26 16:52:29.339  INFO 9048 --- [restartedMain] Hibernate Types                          : This framework is proudly powered by:
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  _    _                           _     _
@@ -37,46 +37,71 @@ Hypersistence Optimizer is that tool! For more details, go to:
 https://vladmihalcea.com/hypersistence-optimizer/
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-2021-10-15 11:59:37.809  INFO 12984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-15 11:59:37.817  INFO 12984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-10-15 11:59:38.427  WARN 12984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-10-15 11:59:38.920  INFO 12984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-10-15 11:59:38.968  INFO 12984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2021-10-15 11:59:38.991  INFO 12984 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 5.433 seconds (JVM running for 7.261)
-2021-10-15 11:59:38.995  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
-2021-10-15 11:59:39.001  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 5 files.
-2021-10-15 11:59:39.185  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 5 files.
-2021-10-15 11:59:39.284  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
-2021-10-15 11:59:39.284  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Fetching current menu.
-2021-10-15 11:59:39.284  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Downloading file from google drive.
-2021-10-15 11:59:40.932  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Parsing week menu from document.
-2021-10-15 11:59:40.950  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Checking NeedToSaveOrUpdateDatabase.
-2021-10-15 11:59:40.955  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Checking LastSavedChanged, are equal: true
-2021-10-15 11:59:40.964  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] JSON file with path : ./data_docs/202141.json exists in folder: true
-2021-10-15 11:59:40.965  INFO 12984 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Successfully parsed week menu.
-2021-10-15 12:00:09.294  INFO 12984 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-15 12:00:09.295  INFO 12984 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-15 12:00:09.297  INFO 12984 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-10-15 12:00:09.321  INFO 12984 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading current and next weeks from database.
-2021-10-15 12:00:09.323  INFO 12984 --- [http-nio-8888-exec-1] p.b.primalounasbackend.util.Common       : [COMMON] Next week identifier: 202142
-2021-10-15 12:00:09.326  INFO 12984 --- [http-nio-8888-exec-1] p.b.primalounasbackend.util.Common       : [COMMON] Current week identifier: 202141
-2021-10-15 12:00:11.586  INFO 12984 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:00:14.050  INFO 12984 --- [http-nio-8888-exec-5] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:02:11.390  INFO 12984 --- [http-nio-8888-exec-9] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:02:16.965  INFO 12984 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:02:23.753  INFO 12984 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:03:00.798  INFO 12984 --- [http-nio-8888-exec-5] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:03:58.503  INFO 12984 --- [http-nio-8888-exec-7] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:09:48.943  INFO 12984 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:09:57.668  INFO 12984 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:11:39.985  INFO 12984 --- [http-nio-8888-exec-7] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:11:46.753  INFO 12984 --- [http-nio-8888-exec-9] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:12:37.206  INFO 12984 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
-2021-10-15 12:12:39.697  INFO 12984 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 33 course.
-2021-10-15 12:12:40.369  INFO 12984 --- [http-nio-8888-exec-5] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 40 course.
-2021-10-15 12:53:35.527  INFO 12984 --- [http-nio-8888-exec-5] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading all restaurant weeks from database.
-2021-10-15 12:53:45.720  INFO 12984 --- [http-nio-8888-exec-7] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading restaurant courses all from database.
-2021-10-15 12:53:45.767  INFO 12984 --- [http-nio-8888-exec-9] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading most frequent occurring courses from database.
-2021-10-15 14:41:44.838  INFO 12984 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-10-15 14:41:44.844  INFO 12984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-15 14:41:44.850  INFO 12984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 16:52:30.246  INFO 9048 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 16:52:30.252  INFO 9048 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-26 16:52:30.903  WARN 9048 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-26 16:52:31.438  INFO 9048 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-26 16:52:31.491  INFO 9048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-10-26 16:52:31.514  INFO 9048 --- [restartedMain] p.b.primalounasbackend.Application       : Started Application in 6.045 seconds (JVM running for 8.036)
+2021-10-26 16:52:31.520  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Reading local files.
+2021-10-26 16:52:31.526  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Found 5 files.
+2021-10-26 16:52:31.740  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Parsed 5 files.
+2021-10-26 16:52:31.834  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [BACKUP] Saved 0 files to database.
+2021-10-26 16:52:31.834  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Fetching current menu.
+2021-10-26 16:52:31.834  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Downloading file from google drive.
+2021-10-26 16:52:33.498  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Parsing week menu from document.
+2021-10-26 16:52:33.514  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Checking NeedToSaveOrUpdateDatabase.
+2021-10-26 16:52:33.515  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Week doesn't exist in database.
+2021-10-26 16:52:33.516  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Saving week to database.
+2021-10-26 16:52:33.519  INFO 9048 --- [restartedMain] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Saving new week to database with id: 202143.
+2021-10-26 16:52:33.700  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] JSON file with path : ./data_docs/202143.json exists in folder: false
+2021-10-26 16:52:33.701  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Saving week doc and json files to folder.
+2021-10-26 16:52:33.707  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Checking if folder exists.
+2021-10-26 16:52:33.708  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Saving doc file.
+2021-10-26 16:52:33.736  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Saving json file.
+2021-10-26 16:52:33.758  INFO 9048 --- [restartedMain] p.b.p.util.DatabaseBackupCheck           : [FETCH] Successfully parsed week menu.
+2021-10-26 16:53:04.525  INFO 9048 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 16:53:04.526  INFO 9048 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-26 16:53:04.527  INFO 9048 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-26 16:53:04.543  INFO 9048 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading current and next weeks from database.
+2021-10-26 16:53:04.545  INFO 9048 --- [http-nio-8888-exec-1] p.b.primalounasbackend.util.Common       : [COMMON] Next week identifier: 202144
+2021-10-26 16:53:04.548  INFO 9048 --- [http-nio-8888-exec-1] p.b.primalounasbackend.util.Common       : [COMMON] Current week identifier: 202143
+2021-10-26 19:19:16.256  INFO 9048 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 0 course.
+2021-10-26 19:26:01.250  INFO 9048 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading all restaurant weeks from database.
+2021-10-26 19:26:08.780  INFO 9048 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading restaurant courses all from database.
+2021-10-26 19:26:08.818  INFO 9048 --- [http-nio-8888-exec-4] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Loading most frequent occurring courses from database.
+2021-10-26 20:00:00.006  INFO 9048 --- [scheduling-1] p.b.p.util.ScheduledService              : [FETCH] Fetching current menu.
+2021-10-26 20:00:00.006  INFO 9048 --- [scheduling-1] p.b.p.util.ScheduledService              : [FETCH] Downloading file from google drive.
+2021-10-26 20:00:01.226  INFO 9048 --- [scheduling-1] p.b.p.util.ScheduledService              : [FETCH] Parsing week menu from document.
+2021-10-26 20:00:01.228  INFO 9048 --- [scheduling-1] p.b.p.util.ScheduledService              : [FETCH] Checking NeedToSaveOrUpdateDatabase.
+2021-10-26 20:00:01.233  INFO 9048 --- [scheduling-1] p.b.p.util.ScheduledService              : [FETCH] Checking LastSavedChanged, are equal: true
+2021-10-26 20:00:01.233  INFO 9048 --- [scheduling-1] p.b.p.util.ScheduledService              : [FETCH] JSON file with path : ./data_docs/202143.json exists in folder: true
+2021-10-26 20:00:01.233  INFO 9048 --- [scheduling-1] p.b.p.util.ScheduledService              : [FETCH] Successfully parsed week menu.
+2021-10-26 20:31:55.173  INFO 9048 --- [http-nio-8888-exec-9] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
+2021-10-26 20:31:57.592  INFO 9048 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
+2021-10-26 20:31:59.253  INFO 9048 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:31:59.884  INFO 9048 --- [http-nio-8888-exec-4] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:32:00.627  INFO 9048 --- [http-nio-8888-exec-7] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:32:05.349  INFO 9048 --- [http-nio-8888-exec-9] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:32:06.130  INFO 9048 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:32:06.527  INFO 9048 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:32:07.616  INFO 9048 --- [http-nio-8888-exec-4] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:32:08.497  INFO 9048 --- [http-nio-8888-exec-7] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
+2021-10-26 20:32:08.831  INFO 9048 --- [http-nio-8888-exec-9] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 1 course.
+2021-10-26 20:32:25.466  INFO 9048 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:32:25.647  INFO 9048 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:32:36.332  INFO 9048 --- [http-nio-8888-exec-4] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:32:36.569  INFO 9048 --- [http-nio-8888-exec-7] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:32:47.696  INFO 9048 --- [http-nio-8888-exec-9] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:32:47.945  INFO 9048 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:32:57.731  INFO 9048 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:32:57.945  INFO 9048 --- [http-nio-8888-exec-4] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:33:42.424  INFO 9048 --- [http-nio-8888-exec-7] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:33:42.736  INFO 9048 --- [http-nio-8888-exec-9] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 47 course.
+2021-10-26 20:34:56.749  INFO 9048 --- [http-nio-8888-exec-1] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:34:57.379  INFO 9048 --- [http-nio-8888-exec-3] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:35:03.418  INFO 9048 --- [http-nio-8888-exec-4] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 20:35:03.615  INFO 9048 --- [http-nio-8888-exec-7] p.b.p.s.impl.RestaurantMenuServiceImpl   : [DB] Updating votes for 22 course.
+2021-10-26 23:16:47.841  INFO 9048 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-26 23:16:47.843  INFO 9048 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 23:16:47.846  INFO 9048 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
