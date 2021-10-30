@@ -20,6 +20,12 @@ public class RestaurantWeek {
 
     private String weekName;
 
+    private String saladPrice;
+
+    private String soupPrice;
+
+    private String foodPrice;
+
     @OneToMany
     private List<RestaurantDay> days;
 }

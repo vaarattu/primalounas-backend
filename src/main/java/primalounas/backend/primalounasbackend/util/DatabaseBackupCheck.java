@@ -3,6 +3,7 @@ package primalounas.backend.primalounasbackend.util;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hwpf.HWPFDocument;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
@@ -40,12 +41,15 @@ public class DatabaseBackupCheck {
 
     private void ReadLocalFilesToDatabase() {
         log.info("[BACKUP] Reading local files.");
-        String path = "./data_docs/";
+        String path = "./doc_files/";
+
+        if (Files.isDirectory(Path.of(path))){
+
         File folder = new File(path);
         List<String> fileNames = new ArrayList<>();
         for (File fileEntry : folder.listFiles()) {
             String fileName = fileEntry.getName();
-            if (fileName.endsWith(".json")){
+            if (fileName.endsWith(".doc")){
                 fileNames.add(fileEntry.getName());
             }
         }
@@ -53,9 +57,8 @@ public class DatabaseBackupCheck {
         List<RestaurantWeek> weeks = new ArrayList<>();
 
         for (String fileName : fileNames) {
-            ObjectMapper mapper = new ObjectMapper();
             try {
-                weeks.add(mapper.readValue(new File(path + fileName), RestaurantWeek.class));
+                weeks.add(Common.ParseWeekFromDocument(new HWPFDocument(new POIFSFileSystem(new File(path + fileName)))));
             } catch (Exception e) {
 
             }
@@ -77,6 +80,7 @@ public class DatabaseBackupCheck {
         }
         log.info("[BACKUP] Saved " + counter + " files to database.");
 
+        }
         fetchWeekMenu();
     }
 
@@ -104,9 +108,9 @@ public class DatabaseBackupCheck {
                 restaurantMenuService.addNewWeek(week);
             }
 
-            if (!CurrentWeekSaved(Common.GenerateWeekIdentifier(week.getWeekName()))){
-                log.info("[FETCH] Saving week doc and json files to folder.");
-                SaveFiles(document, week);
+            if (!CurrentWeekSaved(week)){
+                log.info("[FETCH] Saving week doc file to folder.");
+                SaveDocFile(document, week);
             }
 
             con.disconnect();
@@ -130,17 +134,16 @@ public class DatabaseBackupCheck {
         return !areEqual;
     }
 
-    private boolean CurrentWeekSaved(long weekIdentifier){
-        String folderPath = "./data_docs/";
-        String jsonFilePath = folderPath + weekIdentifier + ".json";
-        File file = new File(jsonFilePath);
-        log.info("[FETCH] JSON file with path : " + jsonFilePath + " exists in folder: " + (file.isFile()));
+    private boolean CurrentWeekSaved(RestaurantWeek week){
+        String folderPath = "./doc_files/";
+        String docFilePath = folderPath + week.getWeekName() + "-" + Year.now() + ".doc";
+        File file = new File(docFilePath);
+        log.info("[FETCH] DOC file with path : " + docFilePath + " exists in folder: " + (file.isFile()));
         return file.isFile();
     }
 
-    private void SaveFiles(HWPFDocument document, RestaurantWeek week) throws Exception {
-        String folderPath = "./data_docs/";
-        String jsonFilePath = folderPath + Common.GenerateWeekIdentifier(week.getWeekName());
+    private void SaveDocFile(HWPFDocument document, RestaurantWeek week) throws Exception {
+        String folderPath = "./doc_files/";
         String docFilePath = folderPath + week.getWeekName() + "-" + Year.now();
         log.info("[FETCH] Checking if folder exists.");
         if (!Files.isDirectory(Path.of(folderPath))){
@@ -151,8 +154,5 @@ public class DatabaseBackupCheck {
         FileOutputStream fos = new FileOutputStream(docFilePath + ".doc");
         document.write(fos);
         fos.close();
-        log.info("[FETCH] Saving json file.");
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.writeValue(new File(jsonFilePath + ".json"), week);
     }
 }

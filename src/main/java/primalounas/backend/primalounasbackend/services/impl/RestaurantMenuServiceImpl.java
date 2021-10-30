@@ -136,7 +136,7 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
         return this.restaurantCourseRepository.findAll();
     }
 
-    @CacheEvict("allCourses")
+    @CacheEvict(value = "allCourses", allEntries = true)
     @Override
     public List<CourseVote> updateCourseVotes(List<CourseVote> courseVotes) {
         log.info("[DB] Updating votes for " + courseVotes.size() + " courses.");
@@ -156,10 +156,10 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
         return this.courseVoteRepository.saveAll(votesInDB);
     }
 
-    @CacheEvict("allCourses")
+    @CacheEvict(value = "allCourses", allEntries = true)
     @Override
     public CourseVote updateCourseVote(CourseVote courseVote) {
-        log.info("[DB] Updating votes for " + courseVote.getId() + " course.");
+        log.info("[DB] Updating votes for courseID: " + courseVote.getId() + ".");
 
         Optional<CourseVote> voteInDB = this.courseVoteRepository.findById(courseVote.getId());
 

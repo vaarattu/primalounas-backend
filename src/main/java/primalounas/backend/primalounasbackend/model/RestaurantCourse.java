@@ -26,8 +26,6 @@ public class RestaurantCourse {
 
     private String name;
 
-    private String price;
-
     private String type;
 
     @Type(type = "list-array")

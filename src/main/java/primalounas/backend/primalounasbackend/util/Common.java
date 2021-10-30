@@ -85,6 +85,10 @@ public class Common {
         week.setWeekName(title);
         week.setId(GenerateWeekIdentifier(week.getWeekName()));
 
+        week.setFoodPrice(foodPrice.split(" ", 2)[1]);
+        week.setSaladPrice(saladPrice.split(" ", 2)[1]);
+        week.setSoupPrice(soupPrice.split(" ", 2)[1]);
+
         boolean[] bDays = {false, false, false, false, false};
         List<List<String>> dayMenu = new ArrayList<>();
 
@@ -183,8 +187,6 @@ public class Common {
                     type = "main";
                 }
 
-                price = price.split(" ", 2)[1];
-
                 String[] nameSplit = name.split(" ");
                 String allergens = nameSplit[nameSplit.length - 1];
                 String[] allergensSplit = {};
@@ -200,12 +202,13 @@ public class Common {
                     name = name.replaceAll(" " + allergens, "");
                 }
                 name = name.trim();
+                name = name.substring(0, 1).toUpperCase() + name.substring(1);
+                name = name.replaceAll("[,.!?;:]", "$0 ").replaceAll("\\s+", " ");
 
                 List<String> tags = new ArrayList<>(Arrays.asList(allergensSplit));
 
                 RestaurantCourse course = new RestaurantCourse();
                 course.setName(name);
-                course.setPrice(price);
                 course.setType(type);
                 course.setTags(tags);
 
