@@ -209,6 +209,10 @@ public class Common {
                     name = "Juuressosekeittoa";
                 }
 
+                if (name.contains(",")){
+                    name = name.split(",")[0];
+                }
+
                 List<String> tags = new ArrayList<>(Arrays.asList(allergensSplit));
 
                 RestaurantCourse course = new RestaurantCourse();
