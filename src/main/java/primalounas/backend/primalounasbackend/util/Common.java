@@ -205,6 +205,10 @@ public class Common {
                 name = name.substring(0, 1).toUpperCase() + name.substring(1);
                 name = name.replaceAll("[,.!?;:]", "$0 ").replaceAll("\\s+", " ");
 
+                if (name.equals("Juuresosekeittoa")){
+                    name = "Juuressosekeittoa";
+                }
+
                 List<String> tags = new ArrayList<>(Arrays.asList(allergensSplit));
 
                 RestaurantCourse course = new RestaurantCourse();
