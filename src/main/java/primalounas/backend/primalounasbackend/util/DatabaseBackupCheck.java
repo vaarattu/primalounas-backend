@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
@@ -18,6 +19,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.text.DateFormat;
@@ -89,16 +91,15 @@ public class DatabaseBackupCheck {
 
         try {
             log.info("[FETCH] Downloading file from google drive.");
-            String stringUrl = "https://drive.google.com/uc?id=0B8nQh-fa3RbLMFN0X1QxaDFhYzQ&export=download";
-            URL url = new URL(stringUrl);
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("GET");
-            con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
-            con.setRequestProperty("Accept", "*/*");
-            con.setConnectTimeout(10000);
-            con.setReadTimeout(10000);
-            BufferedInputStream in = new BufferedInputStream(con.getInputStream());
-            HWPFDocument document = new HWPFDocument(in);
+
+            String ck = "rtFa=QeqvMIRi5YHhldHm4UPY8dUfOn023VZ7xag5Mgr9FO0mRDc0QzQ2RjAtNUVGMS00RkVFLTkzQzktMDg2MUE0QTRBQTdFIzEzMjkyODgwMDg2MjQ1MTY0MiNCQkVEMkRBMC03MDQ5LTQwMDAtMTRGNi04NTIyQzg2MjQzRDEjSlVIQS5BTEEtUkFOVEFMQSU0MFBSSU1BUE9XRVIuQ09NXRETYtpbjNIDLCraE3WR0x89WBIIeHQVV3TFpjYXqlH4EgiekCWVfaAr1DXZLmai0w4YYTFYdxCwveUmkWs4uLJqJsGYFAsOf8ZcUVtPaVIHNcAlXwwCoYIaRfLxnzwlWzhSFxvgTm+6zKmr1/3sDXR9VsDycUG79931XxTkWm56QPKEdLp6WoVAQogEL+zwNL89F6MyXg3P3ESwVeEyOYGbIGsRop3HXyXaf16lSuQ7egebk05GlfZ7LTytcAF34REFVCuz7Shyx4QGnaR3xEMsornlcpVtUPLw4u9lE7b3dlZOYgg5XSj5qpnLQEp1o9Ten3XfYeALbMJYjTQCGZ8AAAA=;" +
+                    "FedAuth=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjEyLDBoLmZ8bWVtYmVyc2hpcHwxMDAzMjAwMTNjOWY3MWE2QGxpdmUuY29tLDAjLmZ8bWVtYmVyc2hpcHxqdWhhLmFsYS1yYW50YWxhQHByaW1hcG93ZXIuY29tLDEzMjkxNTQ1NDg1MDAwMDAwMCwxMzI5MDUzNDMzNTAwMDAwMDAsMTMyOTMzMTIwODYyMjk0NzcwLDYyLjI0OC4xMzMuMzIsNjcsZDc0YzQ2ZjAtNWVmMS00ZmVlLTkzYzktMDg2MWE0YTRhYTdlLCxiNWJhNjM0Zi1hM2JlLTQ4YjMtYmI3Ny03NTVhYjQxODhjNzcsYmJlZDJkYTAtNzA0OS00MDAwLTE0ZjYtODUyMmM4NjI0M2QxLGJiZWQyZGEwLTcwNDktNDAwMC0xNGY2LTg1MjJjODYyNDNkMSwsMCwxMzI5Mjk2NjQ4NjE5ODIzNDIsMTMyOTMxMzkyODYxOTgyMzQyLCwsZXlKNGJYTmZZMk1pT2lKYlhDSkRVREZjSWwwaUxDSjRiWE5mYzNOdElqb2lNU0lzSW5CeVpXWmxjbkpsWkY5MWMyVnlibUZ0WlNJNkltcDFhR0V1WVd4aExYSmhiblJoYkdGQWNISnBiV0Z3YjNkbGNpNWpiMjBpTENKMWRHa2lPaUpYTFdKMVZWRnJiakZyWlRGVFJsQkRialZLTUVGUkluMD0sMjY1MDQ2Nzc0Mzk5OTk5OTk5OSwxMzI5Mjg4MDA4NTAwMDAwMDAsYzQzYTY3YTItZGNkMC00YmEyLTlkMzUtN2U2ZTM2YWJhYmJkLCwsLCwsMCwsRFdjVndRRjBUR0FxZDQ5UEwrdmY2N3NQQ00xS3lBeTM4dXRYMURkSGNnMXAydnMrckorVWVhK0QrcXE5Wk5qdVlpWnJIODhWai9kZkpOZzhaT25obGNJd3RiVEFuTFJwZHZRVFRHWWVBNWFuN3dzRUpoSEdJYWJqelNyQmRNR0RSK1VyWVgwcHhxMjIzZ0htcGw0dWphYlFTQlR0bGZKMXlwOUxYMnZHNUdBc2NjYlZFVEFDemV0dXlpbkRnL1BJUXBtYUNhK2RwaXpnNWZhckt0NFRBSFJIZkNGRFRKL25YTjlxdEczZmgrTTM5WitBWG56TW5GMGVWQ2x0bUJoWFkzZ1QzUWkxa0YyK09sMEpHUzJyZGlveGVwSXZrOVU5MXgzSngxTjFJbEdqZE0ydmdyOEgydFdDTXE5QlVkMmtZYnhQR2ZCa0tGekwvclBjMmVvTzh3PT08L1NQPg==;";
+
+            URL url2 = new URL("https://primacorporate.sharepoint.com/sites/FI-Tietohallinto/_layouts/15/download.aspx?UniqueId=%7B00994173%2D6152%2D4356%2D9a29%2De4f7bc8ddfbb%7D");
+            URLConnection urlConnection = url2.openConnection();
+            urlConnection.setRequestProperty("Cookie", ck);
+            BufferedInputStream in = new BufferedInputStream(urlConnection.getInputStream());
+            XWPFDocument document = new XWPFDocument(in);
 
             log.info("[FETCH] Parsing week menu from document.");
             RestaurantWeek week = Common.ParseWeekFromDocument(document);
@@ -113,7 +114,6 @@ public class DatabaseBackupCheck {
                 SaveDocFile(document, week);
             }
 
-            con.disconnect();
             log.info("[FETCH] Successfully parsed week menu.");
         } catch (Exception e){
             log.error("[FETCH] Error parsing week menu, exception: " + e.getMessage(), e);
@@ -143,6 +143,20 @@ public class DatabaseBackupCheck {
     }
 
     private void SaveDocFile(HWPFDocument document, RestaurantWeek week) throws Exception {
+        String folderPath = "./doc_files/";
+        String docFilePath = folderPath + week.getWeekName() + "-" + Year.now();
+        log.info("[FETCH] Checking if folder exists.");
+        if (!Files.isDirectory(Path.of(folderPath))){
+            log.info("[FETCH] Folder does not exist, creating folder.");
+            Files.createDirectory(Path.of(folderPath));
+        }
+        log.info("[FETCH] Saving doc file.");
+        FileOutputStream fos = new FileOutputStream(docFilePath + ".doc");
+        document.write(fos);
+        fos.close();
+    }
+
+    private void SaveDocFile(XWPFDocument document, RestaurantWeek week) throws Exception {
         String folderPath = "./doc_files/";
         String docFilePath = folderPath + week.getWeekName() + "-" + Year.now();
         log.info("[FETCH] Checking if folder exists.");
